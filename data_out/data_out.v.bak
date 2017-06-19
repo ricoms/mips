@@ -1,0 +1,3 @@
+module data_out(clock, data, address, MemWrite);
+
+endmodule

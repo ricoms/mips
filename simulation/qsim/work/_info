@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/ricoms/Documents/1.Cursando/LabAOCTiago/Projeto/simulation/qsim
+vMIPS
+Z1 IPE4_gobOhnezK>aVP90E[3
+Z2 V0c=1TL=DMG3Z`Qm7NbLgJ0
+Z3 d/home/ricoms/Documents/1.Cursando/LabAOCTiago/Projeto/simulation/qsim
+Z4 w1496806370
+Z5 8MIPS.vo
+Z6 FMIPS.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|MIPS.vo|
+Z9 o-work work -O0
+Z10 n@m@i@p@s
+!i10b 1
+Z11 !s100 _z[R7<l9Y47J4iZ`R;5P[1
+!s85 0
+Z12 !s108 1496806370.965566
+Z13 !s107 MIPS.vo|
+!s101 -O0
+vMIPS_vlg_check_tst
+!i10b 1
+Z14 !s100 8feVQQ2K<Nmd2VjfIQ^BX2
+Z15 IjR<=mTV8YU>gTT>@P3P8_1
+Z16 VSDUWfd:c8HSHSm_3140Ah0
+R3
+Z17 w1496806367
+Z18 8UC_wave.vwf.vt
+Z19 FUC_wave.vwf.vt
+L0 61
+R7
+r1
+!s85 0
+31
+Z20 !s108 1496806370.989298
+Z21 !s107 UC_wave.vwf.vt|
+Z22 !s90 -work|work|UC_wave.vwf.vt|
+!s101 -O0
+R9
+Z23 n@m@i@p@s_vlg_check_tst
+vMIPS_vlg_sample_tst
+!i10b 1
+Z24 !s100 ]U;Ck?el[cbL5j<5WD9M]3
+Z25 I7TRXcDaZzOT^8Z2k;QnE11
+Z26 VZczzY;z>fD:gokJekl]0j1
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@m@i@p@s_vlg_sample_tst
+vMIPS_vlg_vec_tst
+!i10b 1
+Z28 !s100 <^l5A6:GdA682Q1]mG>XY2
+Z29 I8XJI:dNhDI:Sl3f_cHi:f0
+Z30 VRzMU0X08`5`2Vc6J_8^Sg0
+R3
+R17
+R18
+R19
+Z31 L0 849
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 n@m@i@p@s_vlg_vec_tst

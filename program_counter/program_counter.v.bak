@@ -1,0 +1,13 @@
+module program_counter(clock, address, zero, negative, bzero, bnegative, jump, programCounter, interrupt, reset);
+
+	input wire clock, zero, negative, jump, bzero, bnegative, interrupt, reset;
+	input [9:0] address;
+	reg [9:0] programCounter, newPc, muxA;
+	wire [9:0] pcInc, brancAdd, jumpAdd;
+	wire select;
+	output [9:0];
+	
+	assign select
+	
+	
+endmodule

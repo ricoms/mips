@@ -1,0 +1,9 @@
+module ALUadd4 (
+	data1,
+	aluResult
+);
+	input wire [31:0] data1;
+	output reg [31:0] aluResult;
+
+	aluResult = data1 + 4;
+endmodule

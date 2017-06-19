@@ -1,0 +1,19 @@
+module Instructions_memory(clock, address, instrucao);
+	input clock;
+	input [9:0] address;
+	
+	output [31:0] instrucao;
+	integer clock0 = 0;
+	reg [31:0] RAM[80:0];
+	
+	always @ ( posedge clock ) begin
+		if (clock==0) begin
+			RAM[0] = 32'b100010 // ld
+			RAM[1] = 32'b101010 // st
+			RAM[2] = 32'b000001 // addi
+			RAM[3] = 32'b000000 // 
+			RAM[4] = 32'b000100 // beq
+			RAM[5] = 32'b000110 // bne
+			RAM[6] = 32'b010100 // bne
+	end
+endmodule

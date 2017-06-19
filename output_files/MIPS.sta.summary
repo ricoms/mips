@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'program_counter:pc|programCounter[0]'
+Slack : -1.468
+TNS   : -5.628
+
+Type  : Slow 1200mV 85C Model Setup 'clk_fpga'
+Slack : -1.254
+TNS   : -6.970
+
+Type  : Slow 1200mV 85C Model Hold 'program_counter:pc|programCounter[0]'
+Slack : -1.666
+TNS   : -11.198
+
+Type  : Slow 1200mV 85C Model Hold 'clk_fpga'
+Slack : -0.908
+TNS   : -3.835
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_fpga'
+Slack : -3.000
+TNS   : -11.995
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'program_counter:pc|programCounter[0]'
+Slack : 0.306
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'program_counter:pc|programCounter[0]'
+Slack : -1.466
+TNS   : -5.711
+
+Type  : Slow 1200mV 0C Model Setup 'clk_fpga'
+Slack : -1.059
+TNS   : -5.516
+
+Type  : Slow 1200mV 0C Model Hold 'program_counter:pc|programCounter[0]'
+Slack : -1.368
+TNS   : -9.155
+
+Type  : Slow 1200mV 0C Model Hold 'clk_fpga'
+Slack : -0.874
+TNS   : -3.831
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_fpga'
+Slack : -3.000
+TNS   : -11.995
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'program_counter:pc|programCounter[0]'
+Slack : 0.238
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_fpga'
+Slack : -0.097
+TNS   : -0.234
+
+Type  : Fast 1200mV 0C Model Setup 'program_counter:pc|programCounter[0]'
+Slack : -0.015
+TNS   : -0.015
+
+Type  : Fast 1200mV 0C Model Hold 'program_counter:pc|programCounter[0]'
+Slack : -1.041
+TNS   : -7.352
+
+Type  : Fast 1200mV 0C Model Hold 'clk_fpga'
+Slack : -0.460
+TNS   : -1.980
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_fpga'
+Slack : -3.000
+TNS   : -10.738
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'program_counter:pc|programCounter[0]'
+Slack : 0.431
+TNS   : 0.000
+
+------------------------------------------------------------
