@@ -1,0 +1,31 @@
+module MIPS (
+	input wire data1, data1,
+	input wire sign,
+	output wire [1:0] mux_out,
+	output wire [31:0] instrucao
+);
+
+	wire clock;
+	divisor_frequencia df(clk_fpga, clock);
+	
+	wire [31:0] PC_backfrom_add1;
+	wire [31:0] PC_goto_add1;
+	ALUadd1(.data1(PC_goto_add1), .aluResult(PC_backfrom_add1));
+	program_counter pc(.clock(clock), .address(PC_backfrom_add1),
+							 .interrupt(interrupt), .reset(reset),
+							 .programCounter(PC_goto_add1));
+	
+	//wire [31:0] instrucao;
+	Instructions_memory(.clock(clock), .address(PC_goto_add1), .instrucao(instrucao));
+	
+	Unidade_de_controle(.instrucao(instrucao[31:26]), .regDst(regDst),
+							  .jump(jump), .branch(branch), .memRead(memRead),
+							  .memtoReg(memtoReg), .aluOp(aluOp), .memWrite(memWrite),
+							  .aluSrc(aluSrc), .regWrite(regWrite));
+	
+	//ALU alu(data1, data2, operation, zero, aluResult);
+	//bitExtender be( .input16(input16), .output32(output32));
+	
+endmodule
+// memoria
+// banco de registradores
