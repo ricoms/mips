@@ -11,13 +11,13 @@ module registers (
 	input wire [5:0] user_number;
 	
 	output wire [31:0] readData1, readData2;
-	output wire [31:0] toDisplay;
+	output reg [31:0] toDisplay;
 	
 	reg[31:0] registerFile[31:0];
 	
 	always @ (posedge clock) begin
-		assign toDisplay = registerFile[31];
-		assign registerFile[30] = {{26{'0'}}, {user_number}};
+		toDisplay = registerFile[31];
+		registerFile[30] = {{26'b0}, {user_number}};
 		if(RegWrite == 1)
 			registerFile[writeRegister] = writeData;
 	end

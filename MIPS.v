@@ -2,7 +2,7 @@ module MIPS (
 	input wire clk_fpga, reset, interrupt,
 	input wire [5:0] user_number,
 	input wire program,
-	output wire [31:0] display
+	output wire [31:0] ones, tens, hundreds, thousands
 );
 	wire clock, regDst, jump, branch, memRead, memtoReg, memWrite, aluSrc, regWrite, zero;
 	wire [1:0] aluOp;
@@ -17,7 +17,7 @@ module MIPS (
 	MUX32bits muxBranch(.data1(PC_backfrom_add1), .data2(aluAddResult),
 						     .sign(branch & zero), .mux_out(muxBranch_out));
 	MUX32bits muxJump(.data1(muxBranch_out),
-						   .data2({{instrucao[25:0] << 2}, {PC_backfrom_add1[31:28]}}),
+						   .data2({{PC_backfrom_add1[31:28]}, {2'b00}, {instrucao[25:0] }}), //<< 2}}),
 						   .sign(jump), .mux_out(muxJump_out));
 	
 	ALUadd(.data1(PC_backfrom_add1), .data2(output32 << 2), .aluResult(aluAddResult));
@@ -37,11 +37,11 @@ module MIPS (
 						   .sign(regDst), .mux_out(muxRegDst_out));
 	
 	registers ( .readRegister1(instrucao[25:21]), .readRegister2(instrucao[20:16]),
-	   .writeRegister(muxRegDst_out), .clock(clock), .RegWrite(regWrite), .user_number(user_number)
+	   .writeRegister(muxRegDst_out), .clock(clock), .RegWrite(regWrite), .user_number(user_number),
 		.writeData(returnToRegisters), .readData1(data1), .readData2(data2), .toDisplay(toDisplay)
 	);
 	
-	bitExtender be( .input16(instrucao[15:0]), .output32(output32));
+	bitExtender be(.input16(instrucao[15:0]), .output32(output32));
 		
 	MUX32bits ULASrc(.data1(data2), .data2(output32),
 						     .sign(aluSrc), .mux_out(ULASrc_out));
@@ -53,5 +53,8 @@ module MIPS (
 	
 	MUX32bits finalMux(.data1(memDataOut), .data2(mainAluResult),
 						     .sign(memtoReg), .mux_out(returnToRegisters));
+							 
+	Output(.clock(clock), .binary(toDisplay), .ones(ones),
+			 .tens(tens), .hundreds(hundreds), .thousands(thousands)); 
 	
 endmodule
