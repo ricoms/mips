@@ -2,7 +2,9 @@ module MIPS (
 	input wire clk_fpga, reset, interrupt,
 	input wire [5:0] user_number,
 	input wire program,
-	output wire [31:0] ones, tens, hundreds, thousands
+	output wire [6:0] ones, tens, hundreds, thousands, programOnes,
+	programTens, programHundreds, programThousands, userOnes, userTens,
+	userHundreds, userThousands
 );
 	wire clock, regDst, jump, branch, memRead, memtoReg, memWrite, aluSrc, regWrite, zero;
 	wire [1:0] aluOp;
@@ -20,7 +22,8 @@ module MIPS (
 						   .data2({{PC_backfrom_add1[31:28]}, {2'b00}, {instrucao[25:0] }}), //<< 2}}),
 						   .sign(jump), .mux_out(muxJump_out));
 	
-	ALUadd(.data1(PC_backfrom_add1), .data2(output32 << 2), .aluResult(aluAddResult));
+	ALUadd(.data1(PC_backfrom_add1), .data2(output32), // << 2),
+			 .aluResult(aluAddResult));
 	
 	program_counter pc(.clock(clock), .address(muxJump_out),
 							 .interrupt(interrupt), .reset(reset),
@@ -54,7 +57,13 @@ module MIPS (
 	MUX32bits finalMux(.data1(memDataOut), .data2(mainAluResult),
 						     .sign(memtoReg), .mux_out(returnToRegisters));
 							 
-	Output(.clock(clock), .binary(toDisplay), .ones(ones),
-			 .tens(tens), .hundreds(hundreds), .thousands(thousands)); 
+	Output(.binary(toDisplay), .ones(ones), .tens(tens),
+			 .hundreds(hundreds), .thousands(thousands)); 
+	
+	Output(.binary(32'b0 + program), .ones(programOnes), .tens(programTens),
+			 .hundreds(programHundreds), .thousands(programThousands)); 
+			 
+	Output(.binary(32'b0 + user_number), .ones(userOnes), .tens(userTens),
+			 .hundreds(userHundreds), .thousands(userThousands)); 
 	
 endmodule

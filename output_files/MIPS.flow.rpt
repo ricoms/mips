@@ -1,5 +1,5 @@
 Flow report for MIPS
-Mon Jun 26 15:02:22 2017
+Mon Jun 26 16:50:37 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun 26 15:02:22 2017           ;
+; Flow Status                        ; Successful - Mon Jun 26 16:50:37 2017           ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Standard Edition ;
 ; Revision Name                      ; MIPS                                            ;
 ; Top-level Entity Name              ; MIPS                                            ;
 ; Family                             ; Cyclone IV E                                    ;
 ; Device                             ; EP4CE115F29C7                                   ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 0 / 114,480 ( 0 % )                             ;
-;     Total combinational functions  ; 0 / 114,480 ( 0 % )                             ;
+; Total logic elements               ; 25 / 114,480 ( < 1 % )                          ;
+;     Total combinational functions  ; 25 / 114,480 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                             ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 138 / 529 ( 26 % )                              ;
+; Total pins                         ; 94 / 529 ( 18 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                           ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                 ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/26/2017 15:01:45 ;
+; Start date & time ; 06/26/2017 16:37:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPS                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +-------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 255332401457282.149850010505725                                        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 255332401457282.149850582007965                                        ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                     ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; /home/ricoms/Documents/1.Cursando/LabAOCTiago/Projeto/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                            ; --            ; --          ; eda_simulation ;
@@ -96,12 +96,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 891 MB              ; 00:00:26                           ;
-; Fitter                    ; 00:00:12     ; 1.0                     ; 1406 MB             ; 00:00:15                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 814 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 917 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1047 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:32     ; --                      ; --                  ; 00:00:48                           ;
+; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 931 MB              ; 00:00:28                           ;
+; Fitter                    ; 00:12:48     ; 1.0                     ; 1418 MB             ; 00:00:18                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 817 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 920 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1044 MB             ; 00:00:01                           ;
+; Total                     ; 00:13:18     ; --                      ; --                  ; 00:00:53                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

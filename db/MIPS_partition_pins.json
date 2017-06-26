@@ -2,7 +2,108 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "programOnes[0]",
+					"strict" : false
+				},
+				{
+					"name" : "programOnes[3]",
+					"strict" : false
+				},
+				{
+					"name" : "programOnes[4]",
+					"strict" : false
+				},
+				{
+					"name" : "programOnes[5]",
+					"strict" : false
+				},
+				{
+					"name" : "userOnes[0]",
+					"strict" : false
+				},
+				{
+					"name" : "userOnes[1]",
+					"strict" : false
+				},
+				{
+					"name" : "userOnes[2]",
+					"strict" : false
+				},
+				{
+					"name" : "userOnes[3]",
+					"strict" : false
+				},
+				{
+					"name" : "userOnes[4]",
+					"strict" : false
+				},
+				{
+					"name" : "userOnes[5]",
+					"strict" : false
+				},
+				{
+					"name" : "userOnes[6]",
+					"strict" : false
+				},
+				{
+					"name" : "userTens[0]",
+					"strict" : false
+				},
+				{
+					"name" : "userTens[1]",
+					"strict" : false
+				},
+				{
+					"name" : "userTens[2]",
+					"strict" : false
+				},
+				{
+					"name" : "userTens[3]",
+					"strict" : false
+				},
+				{
+					"name" : "userTens[4]",
+					"strict" : false
+				},
+				{
+					"name" : "userTens[5]",
+					"strict" : false
+				},
+				{
+					"name" : "userTens[6]",
+					"strict" : false
+				},
+				{
+					"name" : "program",
+					"strict" : false
+				},
+				{
+					"name" : "user_number[0]",
+					"strict" : false
+				},
+				{
+					"name" : "user_number[1]",
+					"strict" : false
+				},
+				{
+					"name" : "user_number[2]",
+					"strict" : false
+				},
+				{
+					"name" : "user_number[4]",
+					"strict" : false
+				},
+				{
+					"name" : "user_number[5]",
+					"strict" : false
+				},
+				{
+					"name" : "user_number[3]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
