@@ -15,8 +15,8 @@ module ALU (
 	always @ (operation or data1 or data2 or ALUOp) begin
 		case (ALUOp[1:0])
 			2'b01: aluResult = data2;     // passa imediato original - ldi
-            // passa imediato * 4 (usado para endereco) - (ld  e st)
-			2'b11: aluResult = data2 * 4; 
+            // passa imediato (* 4) (usado para endereco) - (ld  e st)
+			2'b11: aluResult = data2;
 			default:
 			case (operation[5:0])
 				6'b000000: aluResult = data1; 		   // passa direto - ld

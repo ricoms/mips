@@ -1,6 +1,6 @@
 module MIPS (
 	input wire clk_fpga, reset, interrupt,
-	input wire [5:0] number,
+	input wire [5:0] user_number,
 	input wire program,
 	output wire [31:0] display
 );
@@ -24,7 +24,7 @@ module MIPS (
 	
 	program_counter pc(.clock(clock), .address(muxJump_out),
 							 .interrupt(interrupt), .reset(reset),
-							 .programCounter(PC_goto_add1));
+							 .programCounter(PC_goto_add1), .program(program));
 	
 	Instructions_memory(.clock(clock), .address(PC_goto_add1), .instrucao(instrucao));
 	
@@ -37,7 +37,7 @@ module MIPS (
 						   .sign(regDst), .mux_out(muxRegDst_out));
 	
 	registers ( .readRegister1(instrucao[25:21]), .readRegister2(instrucao[20:16]),
-	   .writeRegister(muxRegDst_out), .clock(clock), .RegWrite(regWrite),
+	   .writeRegister(muxRegDst_out), .clock(clock), .RegWrite(regWrite), .user_number(user_number)
 		.writeData(returnToRegisters), .readData1(data1), .readData2(data2), .toDisplay(toDisplay)
 	);
 	

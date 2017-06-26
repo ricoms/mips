@@ -1,13 +1,16 @@
-module program_counter(clock, address, interrupt, reset, programCounter);
+module program_counter(clock, address, interrupt, reset, programCounter, program);
 
-	input wire clock, interrupt, reset;
+	input wire clock, interrupt, reset, program;
 	input [31:0] address;
 	reg [31:0] programCounter;
 	output [31:0] programCounter;
 	
 	always @ ( posedge clock ) begin
 		if (reset) begin
-			programCounter <= 0;
+			case (program)
+				1'b0: programCounter <= 0;
+				1'b1: programCounter <= 35;
+			endcase
 		end
 		else if (interrupt) begin
 		end
