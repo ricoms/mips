@@ -1,5 +1,5 @@
 Flow report for MIPS
-Mon Jun 26 16:50:37 2017
+Mon Jun 26 18:06:26 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Jun 26 16:50:37 2017           ;
+; Flow Status                        ; Successful - Mon Jun 26 18:06:26 2017           ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Standard Edition ;
 ; Revision Name                      ; MIPS                                            ;
 ; Top-level Entity Name              ; MIPS                                            ;
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/26/2017 16:37:00 ;
+; Start date & time ; 06/26/2017 18:05:54 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; MIPS                ;
 +-------------------+---------------------+
@@ -76,18 +76,22 @@ agreement for further details.
 +-------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 255332401457282.149850582007965                                        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 255332401457282.149851115412366                                        ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                     ; --            ; --          ; eda_simulation ;
 ; EDA_NETLIST_WRITER_OUTPUT_DIR       ; /home/ricoms/Documents/1.Cursando/LabAOCTiago/Projeto/simulation/qsim/ ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                              ; <None>        ; --          ; --             ;
+; FITTER_EFFORT                       ; Fast Fit                                                               ; Auto Fit      ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                                      ; --            ; --          ; --             ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                                   ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                 ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                 ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                 ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                    ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                  ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                           ; --            ; --          ; --             ;
+; SMART_RECOMPILE                     ; On                                                                     ; Off           ; --          ; --             ;
 +-------------------------------------+------------------------------------------------------------------------+---------------+-------------+----------------+
 
 
@@ -96,12 +100,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:21     ; 1.0                     ; 931 MB              ; 00:00:28                           ;
-; Fitter                    ; 00:12:48     ; 1.0                     ; 1418 MB             ; 00:00:18                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 817 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 920 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1044 MB             ; 00:00:01                           ;
-; Total                     ; 00:13:18     ; --                      ; --                  ; 00:00:53                           ;
+; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 927 MB              ; 00:00:25                           ;
+; Fitter                    ; 00:00:11     ; 1.0                     ; 1425 MB             ; 00:00:14                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 820 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 917 MB              ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 1047 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:30     ; --                      ; --                  ; 00:00:46                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
