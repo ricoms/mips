@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Tue Jun 27 22:00:06 2017
+Tue Jun 27 22:45:50 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
 
 
@@ -61,13 +61,13 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jun 27 22:00:06 2017           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jun 27 22:45:50 2017           ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Standard Edition ;
 ; Revision Name                      ; MIPS                                            ;
 ; Top-level Entity Name              ; MIPS                                            ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 4,752                                           ;
-;     Total combinational functions  ; 2,150                                           ;
+; Total logic elements               ; 4,749                                           ;
+;     Total combinational functions  ; 2,147                                           ;
 ;     Dedicated logic registers      ; 2,697                                           ;
 ; Total registers                    ; 2697                                            ;
 ; Total pins                         ; 107                                             ;
@@ -177,7 +177,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
+;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.2%      ;
 ;     Processor 4            ;   0.2%      ;
 +----------------------------+-------------+
@@ -211,16 +211,16 @@ agreement for further details.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Estimated Total logic elements              ; 4,752                  ;
+; Estimated Total logic elements              ; 4,749                  ;
 ;                                             ;                        ;
-; Total combinational functions               ; 2150                   ;
+; Total combinational functions               ; 2147                   ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 1960                   ;
-;     -- 3 input functions                    ; 115                    ;
-;     -- <=2 input functions                  ; 75                     ;
+;     -- 4 input functions                    ; 1954                   ;
+;     -- 3 input functions                    ; 120                    ;
+;     -- <=2 input functions                  ; 73                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 2087                   ;
+;     -- normal mode                          ; 2084                   ;
 ;     -- arithmetic mode                      ; 63                     ;
 ;                                             ;                        ;
 ; Total registers                             ; 2697                   ;
@@ -233,7 +233,7 @@ agreement for further details.
 ;                                             ;                        ;
 ; Maximum fan-out node                        ; DeBounce:comb_4|DB_out ;
 ; Maximum fan-out                             ; 2671                   ;
-; Total fan-out                               ; 16582                  ;
+; Total fan-out                               ; 16569                  ;
 ; Average fan-out                             ; 3.28                   ;
 +---------------------------------------------+------------------------+
 
@@ -243,24 +243,24 @@ agreement for further details.
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node            ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Entity Name          ; Library Name ;
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+----------------------+--------------+
-; |MIPS                                 ; 2150 (16)           ; 2697 (0)                  ; 0           ; 0            ; 0       ; 0         ; 107  ; 0            ; |MIPS                                              ; MIPS                 ; work         ;
+; |MIPS                                 ; 2147 (14)           ; 2697 (0)                  ; 0           ; 0            ; 0       ; 0         ; 107  ; 0            ; |MIPS                                              ; MIPS                 ; work         ;
 ;    |ALU:comb_12|                      ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:comb_12                                  ; ALU                  ; work         ;
 ;    |ALUadd1:comb_5|                   ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALUadd1:comb_5                               ; ALUadd1              ; work         ;
 ;    |ALUadd:comb_7|                    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALUadd:comb_7                                ; ALUadd               ; work         ;
 ;    |DeBounce:comb_3|                  ; 13 (13)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|DeBounce:comb_3                              ; DeBounce             ; work         ;
 ;    |DeBounce:comb_4|                  ; 13 (13)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|DeBounce:comb_4                              ; DeBounce             ; work         ;
-;    |Instructions_memory:comb_9|       ; 40 (40)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Instructions_memory:comb_9                   ; Instructions_memory  ; work         ;
+;    |Instructions_memory:comb_9|       ; 41 (41)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Instructions_memory:comb_9                   ; Instructions_memory  ; work         ;
 ;    |MUX32bits:ULASrc|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX32bits:ULASrc                             ; MUX32bits            ; work         ;
-;    |MUX32bits:finalMux|               ; 101 (101)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX32bits:finalMux                           ; MUX32bits            ; work         ;
-;    |MUX32bits:muxRegDst|              ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX32bits:muxRegDst                          ; MUX32bits            ; work         ;
+;    |MUX32bits:finalMux|               ; 98 (98)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX32bits:finalMux                           ; MUX32bits            ; work         ;
+;    |MUX32bits:muxRegDst|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX32bits:muxRegDst                          ; MUX32bits            ; work         ;
 ;    |Output:comb_16|                   ; 25 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Output:comb_16                               ; Output               ; work         ;
 ;       |BCD:converter|                 ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Output:comb_16|BCD:converter                 ; BCD                  ; work         ;
 ;       |sevenSegmentsDisplay:displayA| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Output:comb_16|sevenSegmentsDisplay:displayA ; sevenSegmentsDisplay ; work         ;
 ;       |sevenSegmentsDisplay:displayB| ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Output:comb_16|sevenSegmentsDisplay:displayB ; sevenSegmentsDisplay ; work         ;
-;    |Unidade_de_controle:comb_10|      ; 29 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Unidade_de_controle:comb_10                  ; Unidade_de_controle  ; work         ;
-;    |mainMemory:comb_13|               ; 1762 (1762)         ; 2592 (2592)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|mainMemory:comb_13                           ; mainMemory           ; work         ;
+;    |Unidade_de_controle:comb_10|      ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Unidade_de_controle:comb_10                  ; Unidade_de_controle  ; work         ;
+;    |mainMemory:comb_13|               ; 1761 (1761)         ; 2592 (2592)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|mainMemory:comb_13                           ; mainMemory           ; work         ;
 ;    |program_counter:pc|               ; 17 (17)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|program_counter:pc                           ; program_counter      ; work         ;
-;    |registers:comb_11|                ; 84 (84)             ; 70 (70)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|registers:comb_11                            ; registers            ; work         ;
+;    |registers:comb_11|                ; 83 (83)             ; 70 (70)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|registers:comb_11                            ; registers            ; work         ;
 +---------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -316,6 +316,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; registers:comb_11|registerFile[30][29]   ; Stuck at GND due to stuck port data_in            ;
 ; registers:comb_11|registerFile[30][30]   ; Stuck at GND due to stuck port data_in            ;
 ; registers:comb_11|registerFile[30][31]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][23]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][22]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][21]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][20]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][19]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][18]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][17]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][16]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][15]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][14]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][13]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][12]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][11]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][10]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][9]     ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][8]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[4][7]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[4][6]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[4][5]     ; Stuck at GND due to stuck port data_in            ;
@@ -323,7 +339,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[4][3]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[4][2]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[4][1]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][0]     ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[4][0]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[3][31]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[3][30]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[3][29]    ; Stuck at GND due to stuck port data_in            ;
@@ -338,8 +354,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[3][20]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[3][19]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[3][18]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[3][17]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[3][16]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[3][17]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[3][16]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[3][15]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[3][14]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[3][13]    ; Stuck at GND due to stuck port data_in            ;
@@ -355,22 +371,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[3][3]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[3][2]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[3][1]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[3][0]     ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[3][0]     ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][31]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][30]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][29]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][28]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][27]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[2][26]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[2][26]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][25]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][24]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][23]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][22]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][21]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[2][20]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[2][19]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[2][18]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[2][17]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[2][20]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[2][19]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[2][18]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[2][17]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][16]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][15]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][14]    ; Stuck at GND due to stuck port data_in            ;
@@ -387,7 +403,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[2][3]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][2]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[2][1]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[2][0]     ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[2][0]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[1][31]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[1][30]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[1][29]    ; Stuck at GND due to stuck port data_in            ;
@@ -453,22 +469,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[0][1]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[0][0]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|clock0[0..31] ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][8]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][9]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][10]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][11]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][12]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][13]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][14]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][15]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][16]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][17]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][18]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][19]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][20]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][21]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][22]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[4][23]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[4][24]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[4][25]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[4][26]    ; Stuck at VCC due to stuck port data_in            ;
@@ -478,7 +478,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[4][30]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[4][31]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][0]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[5][1]     ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[5][1]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][2]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][3]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][4]     ; Stuck at GND due to stuck port data_in            ;
@@ -494,26 +494,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[5][14]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][15]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][16]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[5][17]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[5][18]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[5][19]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[5][20]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[5][17]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[5][18]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[5][19]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[5][20]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][21]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][22]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][23]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][24]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][25]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[5][26]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[5][26]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][27]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][28]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][29]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[5][30]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[5][31]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[6][0]     ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[6][1]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[6][2]     ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[5][31]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[6][0]     ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[6][1]     ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[6][2]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][3]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[6][4]     ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[6][4]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][5]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][6]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][7]     ; Stuck at GND due to stuck port data_in            ;
@@ -525,8 +525,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[6][13]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][14]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][15]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[6][16]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[6][17]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[6][16]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[6][17]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][18]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][19]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][20]    ; Stuck at GND due to stuck port data_in            ;
@@ -536,45 +536,45 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[6][24]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][25]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][26]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[6][27]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[6][28]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[6][27]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[6][28]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][29]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][30]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[6][31]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][0]     ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][1]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][2]     ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][2]     ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][3]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][4]     ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][4]     ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][5]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][6]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][7]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][8]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][9]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][10]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][11]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][12]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][13]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][14]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][15]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][16]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][17]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][11]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][12]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][13]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][14]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][15]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][16]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][17]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][18]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][19]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][20]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][21]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][22]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][23]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][24]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][25]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][21]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][22]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][23]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][24]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][25]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][26]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][27]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[7][28]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[7][28]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][29]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][30]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[7][31]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[8][0]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[8][1]     ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[8][0]     ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[8][1]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][2]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][3]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][4]     ; Stuck at GND due to stuck port data_in            ;
@@ -585,10 +585,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[8][9]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][10]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][11]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[8][12]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[8][13]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[8][14]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[8][15]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[8][12]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[8][13]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[8][14]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[8][15]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][16]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][17]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][18]    ; Stuck at GND due to stuck port data_in            ;
@@ -600,14 +600,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[8][24]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][25]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][26]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[8][27]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[8][27]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][28]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][29]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][30]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[8][31]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][0]     ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][1]     ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][2]     ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][0]     ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][1]     ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][2]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][3]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][4]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][5]     ; Stuck at GND due to stuck port data_in            ;
@@ -616,30 +616,30 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[9][8]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][9]     ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][10]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][11]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][11]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][12]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][13]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][14]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][15]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][16]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][16]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][17]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][18]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][19]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][20]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][21]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][22]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][23]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][24]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][25]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][21]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][22]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][23]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][24]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][25]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][26]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][27]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][27]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][28]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][29]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[9][30]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[9][30]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[9][31]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[10][0]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[10][0]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[10][1]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[10][2]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[10][2]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[10][3]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[10][4]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[10][5]    ; Stuck at GND due to stuck port data_in            ;
@@ -659,16 +659,16 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[10][19]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[10][20]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[10][21]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[10][22]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[10][23]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[10][24]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[10][25]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[10][22]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[10][23]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[10][24]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[10][25]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[10][26]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[10][27]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[10][27]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[10][28]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[10][29]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[10][30]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[10][31]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[10][29]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[10][30]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[10][31]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[11][0]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[11][1]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[11][2]    ; Stuck at GND due to stuck port data_in            ;
@@ -691,17 +691,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[11][19]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[11][20]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[11][21]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[11][22]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[11][23]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[11][24]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[11][25]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[11][22]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[11][23]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[11][24]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[11][25]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[11][26]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[11][27]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[11][28]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[11][29]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[11][29]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[11][30]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[11][31]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[12][0]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[12][0]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][1]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][2]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][3]    ; Stuck at GND due to stuck port data_in            ;
@@ -717,7 +717,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[12][13]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][14]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][15]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[12][16]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[12][16]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][17]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][18]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][19]   ; Stuck at GND due to stuck port data_in            ;
@@ -727,7 +727,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[12][23]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][24]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][25]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[12][26]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[12][26]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][27]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][28]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[12][29]   ; Stuck at GND due to stuck port data_in            ;
@@ -749,17 +749,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[13][13]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[13][14]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[13][15]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[13][16]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[13][16]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[13][17]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[13][18]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[13][19]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[13][20]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[13][18]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[13][19]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[13][20]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[13][21]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[13][22]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[13][23]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[13][24]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[13][25]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[13][26]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[13][26]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[13][27]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[13][28]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[13][29]   ; Stuck at GND due to stuck port data_in            ;
@@ -782,10 +782,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[14][14]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[14][15]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[14][16]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[14][17]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[14][18]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[14][19]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[14][20]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[14][17]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[14][18]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[14][19]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[14][20]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[14][21]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[14][22]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[14][23]   ; Stuck at GND due to stuck port data_in            ;
@@ -798,7 +798,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[14][30]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[14][31]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][0]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[15][1]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[15][1]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][2]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][3]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][4]    ; Stuck at GND due to stuck port data_in            ;
@@ -813,8 +813,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[15][13]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][14]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][15]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[15][16]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[15][17]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[15][16]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[15][17]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][18]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][19]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][20]   ; Stuck at GND due to stuck port data_in            ;
@@ -823,17 +823,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[15][23]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][24]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][25]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[15][26]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[15][26]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][27]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][28]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][29]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[15][30]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[15][31]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[15][31]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][0]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][1]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[16][2]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[16][2]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][3]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[16][4]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[16][4]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][5]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][6]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][7]    ; Stuck at GND due to stuck port data_in            ;
@@ -845,26 +845,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[16][13]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][14]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][15]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[16][16]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[16][16]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][17]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[16][18]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[16][19]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[16][20]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[16][18]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[16][19]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[16][20]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][21]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][22]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][23]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][24]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][25]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[16][26]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[16][27]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[16][28]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[16][26]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[16][27]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[16][28]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][29]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[16][30]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[16][31]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[17][0]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[17][1]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[16][31]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[17][0]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[17][1]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][2]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[17][3]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[17][3]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][4]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][5]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][6]    ; Stuck at GND due to stuck port data_in            ;
@@ -872,32 +872,32 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[17][8]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][9]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][10]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[17][11]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[17][11]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][12]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][13]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][14]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][15]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[17][16]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[17][16]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][17]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][18]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][19]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][20]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[17][21]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[17][21]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][22]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][23]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][24]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][25]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][26]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[17][27]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[17][27]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][28]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][29]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][30]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[17][31]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[18][0]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[18][0]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][1]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[18][2]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[18][2]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][3]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[18][4]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[18][4]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][5]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][6]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][7]    ; Stuck at GND due to stuck port data_in            ;
@@ -910,25 +910,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[18][14]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][15]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][16]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[18][17]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[18][17]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][18]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][19]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][20]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[18][21]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[18][21]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][22]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][23]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][24]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][25]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][26]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[18][27]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[18][28]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[18][29]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[18][27]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[18][28]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[18][29]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[18][30]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[18][31]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[19][0]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[18][31]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[19][0]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][1]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][2]    ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[19][3]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[19][3]    ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][4]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][5]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][6]    ; Stuck at GND due to stuck port data_in            ;
@@ -936,7 +936,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[19][8]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][9]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][10]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[19][11]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[19][11]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][12]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][13]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][14]   ; Stuck at GND due to stuck port data_in            ;
@@ -947,20 +947,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[19][19]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][20]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][21]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[19][22]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[19][23]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[19][24]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[19][25]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[19][22]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[19][23]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[19][24]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[19][25]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][26]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[19][27]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[19][27]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][28]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][29]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[19][30]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[19][31]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[20][0]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[20][1]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[20][2]    ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[20][3]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[19][31]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[20][0]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[20][1]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[20][2]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[20][3]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[20][4]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[20][5]    ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[20][6]    ; Stuck at GND due to stuck port data_in            ;
@@ -978,17 +978,81 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Instructions_memory:comb_9|RAM[20][18]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[20][19]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[20][20]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[20][21]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[20][21]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[20][22]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[20][23]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[20][24]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[20][25]   ; Stuck at GND due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[20][26]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[20][27]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[20][27]   ; Stuck at VCC due to stuck port data_in            ;
 ; Instructions_memory:comb_9|RAM[20][28]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[20][29]   ; Stuck at GND due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[20][30]   ; Stuck at VCC due to stuck port data_in            ;
-; Instructions_memory:comb_9|RAM[20][31]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[20][29]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[20][30]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[20][31]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][0]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][1]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][2]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][3]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][4]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][5]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][6]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][7]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][8]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][9]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][10]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][11]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][12]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][13]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][14]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][15]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][16]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][17]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][18]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][19]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][20]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][21]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][22]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][23]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][24]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][25]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][26]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][27]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][28]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][29]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][30]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[21][31]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][0]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][1]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][2]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][3]    ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][4]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][5]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][6]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][7]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][8]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][9]    ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][10]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][11]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][12]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][13]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][14]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][15]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][16]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][17]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][18]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][19]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][20]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][21]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][22]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][23]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][24]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][25]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][26]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][27]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][28]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][29]   ; Stuck at GND due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][30]   ; Stuck at VCC due to stuck port data_in            ;
+; Instructions_memory:comb_9|RAM[22][31]   ; Stuck at GND due to stuck port data_in            ;
 ; registers:comb_11|toDisplay[1..31]       ; Merged with registers:comb_11|toDisplay[0]        ;
 ; registers:comb_11|registerFile[10][10]   ; Merged with registers:comb_11|registerFile[10][0] ;
 ; registers:comb_11|registerFile[10][11]   ; Merged with registers:comb_11|registerFile[10][0] ;
@@ -1920,7 +1984,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; registers:comb_11|registerFile[10][0]    ; Stuck at GND due to stuck port data_in            ;
 ; registers:comb_11|toDisplay[0]           ; Stuck at GND due to stuck port data_in            ;
 ; program_counter:pc|programCounter[7..31] ; Lost fanout                                       ;
-; Total Number of Removed Registers = 1715 ;                                                   ;
+; Total Number of Removed Registers = 1779 ;                                                   ;
 +------------------------------------------+---------------------------------------------------+
 
 
@@ -1968,8 +2032,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[28] ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[26] ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[19] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[1]  ;
+; 4:1                ; 23 bits   ; 46 LEs        ; 46 LEs               ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[19] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[0]  ;
 ; 32:1               ; 26 bits   ; 546 LEs       ; 52 LEs               ; 494 LEs                ; No         ; |MIPS|registers:comb_11|Mux7                ;
 ; 32:1               ; 6 bits    ; 126 LEs       ; 18 LEs               ; 108 LEs                ; No         ; |MIPS|registers:comb_11|Mux30               ;
 ; 32:1               ; 26 bits   ; 546 LEs       ; 52 LEs               ; 494 LEs                ; No         ; |MIPS|registers:comb_11|Mux47               ;
@@ -2114,19 +2178,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 2656                        ;
 ;     SCLR SLD          ; 22                          ;
 ;     plain             ; 19                          ;
-; cycloneiii_lcell_comb ; 2154                        ;
+; cycloneiii_lcell_comb ; 2151                        ;
 ;     arith             ; 63                          ;
 ;         2 data inputs ; 32                          ;
 ;         3 data inputs ; 31                          ;
-;     normal            ; 2091                        ;
+;     normal            ; 2088                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 39                          ;
-;         3 data inputs ; 84                          ;
-;         4 data inputs ; 1960                        ;
+;         2 data inputs ; 37                          ;
+;         3 data inputs ; 89                          ;
+;         4 data inputs ; 1954                        ;
 ;                       ;                             ;
-; Max LUT depth         ; 14.00                       ;
-; Average LUT depth     ; 7.96                        ;
+; Max LUT depth         ; 15.80                       ;
+; Average LUT depth     ; 8.16                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2135,7 +2199,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -2145,7 +2209,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
-    Info: Processing started: Tue Jun 27 21:59:48 2017
+    Info: Processing started: Tue Jun 27 22:45:30 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2211,9 +2275,8 @@ Warning (10235): Verilog HDL Always Construct warning at MUX32.v(8): variable "s
 Info (12128): Elaborating entity "ALUadd" for hierarchy "ALUadd:comb_7" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 33
 Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pc" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 37
 Info (12128): Elaborating entity "Instructions_memory" for hierarchy "Instructions_memory:comb_9" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 39
-Warning (10030): Net "RAM[80..21]" at Instruction_memory.v(7) has no driver or initial value, using a default initial value '0' File: /home-local/aluno/Documentos/Ricardo/mips/Instruction_memory/Instruction_memory.v Line: 7
+Warning (10030): Net "RAM[80..23]" at Instruction_memory.v(7) has no driver or initial value, using a default initial value '0' File: /home-local/aluno/Documentos/Ricardo/mips/Instruction_memory/Instruction_memory.v Line: 7
 Info (12128): Elaborating entity "Unidade_de_controle" for hierarchy "Unidade_de_controle:comb_10" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 44
-Warning (10272): Verilog HDL Case Statement warning at UC.v(42): case item expression covers a value already covered by a previous case item File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 42
 Warning (10270): Verilog HDL Case Statement warning at UC.v(8): incomplete case statement has no default case item File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 8
 Warning (10240): Verilog HDL Always Construct warning at UC.v(7): inferring latch(es) for variable "regDst", which holds its previous value in one or more paths through the always construct File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 7
 Warning (10240): Verilog HDL Always Construct warning at UC.v(7): inferring latch(es) for variable "aluSrc", which holds its previous value in one or more paths through the always construct File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 7
@@ -2318,7 +2381,6 @@ Info (276014): Found 1 instances of uninferred RAM logic
 Warning (12241): 9 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "Unidade_de_controle:comb_10|memtoReg" merged with LATCH primitive "Unidade_de_controle:comb_10|memRead" File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 4
-    Info (13026): Duplicate LATCH primitive "Unidade_de_controle:comb_10|aluOp[0]" merged with LATCH primitive "Unidade_de_controle:comb_10|memRead" File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 7
 Warning (13012): Latch Unidade_de_controle:comb_10|jump has unsafe behavior File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 4
     Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:pc|programCounter[5] File: /home-local/aluno/Documentos/Ricardo/mips/program_counter/program_counter.v Line: 8
 Warning (13012): Latch Unidade_de_controle:comb_10|branch has unsafe behavior File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 4
@@ -2326,12 +2388,14 @@ Warning (13012): Latch Unidade_de_controle:comb_10|branch has unsafe behavior Fi
 Warning (13012): Latch Unidade_de_controle:comb_10|memRead has unsafe behavior File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 4
     Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:pc|programCounter[5] File: /home-local/aluno/Documentos/Ricardo/mips/program_counter/program_counter.v Line: 8
 Warning (13012): Latch Unidade_de_controle:comb_10|memWrite has unsafe behavior File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 4
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:pc|programCounter[2] File: /home-local/aluno/Documentos/Ricardo/mips/program_counter/program_counter.v Line: 8
-Warning (13012): Latch Unidade_de_controle:comb_10|aluSrc has unsafe behavior File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 4
     Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:pc|programCounter[5] File: /home-local/aluno/Documentos/Ricardo/mips/program_counter/program_counter.v Line: 8
+Warning (13012): Latch Unidade_de_controle:comb_10|aluSrc has unsafe behavior File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 4
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:pc|programCounter[1] File: /home-local/aluno/Documentos/Ricardo/mips/program_counter/program_counter.v Line: 8
 Warning (13012): Latch Unidade_de_controle:comb_10|regWrite has unsafe behavior File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 4
     Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:pc|programCounter[1] File: /home-local/aluno/Documentos/Ricardo/mips/program_counter/program_counter.v Line: 8
 Warning (13012): Latch Unidade_de_controle:comb_10|regDst has unsafe behavior File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 4
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:pc|programCounter[5] File: /home-local/aluno/Documentos/Ricardo/mips/program_counter/program_counter.v Line: 8
+Warning (13012): Latch Unidade_de_controle:comb_10|aluOp[0] has unsafe behavior File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 7
     Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:pc|programCounter[5] File: /home-local/aluno/Documentos/Ricardo/mips/program_counter/program_counter.v Line: 8
 Warning (13012): Latch Unidade_de_controle:comb_10|aluOp[1] has unsafe behavior File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 7
     Warning (13013): Ports D and ENA on the latch are fed by the same signal program_counter:pc|programCounter[1] File: /home-local/aluno/Documentos/Ricardo/mips/program_counter/program_counter.v Line: 8
@@ -2409,15 +2473,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "interrupt" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 2
-Info (21057): Implemented 4923 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4920 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 4816 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 160 warnings
-    Info: Peak virtual memory: 1011 megabytes
-    Info: Processing ended: Tue Jun 27 22:00:06 2017
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:32
+    Info (21061): Implemented 4813 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 161 warnings
+    Info: Peak virtual memory: 1010 megabytes
+    Info: Processing ended: Tue Jun 27 22:45:50 2017
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:35
 
 
 +------------------------------------------+

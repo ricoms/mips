@@ -17,7 +17,7 @@ module registers (
 	
 	always @ (posedge clock) begin
 		toDisplay = registerFile[31];
-		registerFile[30] = {{26'b0}, {user_number}};
+		registerFile[30] = user_number;
 		if(RegWrite == 1)
 			registerFile[writeRegister] = writeData;
 	end

@@ -30,7 +30,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 			end
 			6'b100010:begin // load word
 				regDst  	= 1'b0;
-				aluSrc 	= 1'b0;
+				aluSrc 	= 1'b1;
 				memtoReg = 1'b1;
 				regWrite = 1'b1;
 				memRead 	= 1'b1;
@@ -39,9 +39,9 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				jump 		= 1'b0;
 				aluOp 	= 2'b11;
 			end
-			6'b100010:begin // load word immediate
+			6'b100011:begin // load word immediate
 				regDst  	= 1'b0;
-				aluSrc 	= 1'b0;
+				aluSrc 	= 1'b1;
 				memtoReg = 1'b0;
 				regWrite = 1'b1;
 				memRead 	= 1'b0;
@@ -83,7 +83,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				jump 		= 1'b0;
 				aluOp 	= 2'b10;
 			end
-			6'b010100:begin // jump
+			6'b010000:begin // jump
 				regDst  	= 1'b0;
 				aluSrc 	= 1'b0;
 				memtoReg = 1'b0;

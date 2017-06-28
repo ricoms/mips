@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Jun 27 22:01:22 2017
+Fitter Status : Successful - Tue Jun 27 22:46:45 2017
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Standard Edition
 Revision Name : MIPS
 Top-level Entity Name : MIPS
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 3,438 / 114,480 ( 3 % )
-    Total combinational functions : 2,150 / 114,480 ( 2 % )
+Total logic elements : 3,439 / 114,480 ( 3 % )
+    Total combinational functions : 2,147 / 114,480 ( 2 % )
     Dedicated logic registers : 2,697 / 114,480 ( 2 % )
 Total registers : 2697
 Total pins : 107 / 529 ( 20 % )

@@ -9,7 +9,7 @@ module program_counter(clock, address, interrupt, reset, programCounter, program
 		if (reset) begin
 			case (program)
 				1'b0: programCounter <= 0;
-				1'b1: programCounter <= 10;
+				1'b1: programCounter <= 11;
 			endcase
 		end
 		else begin
