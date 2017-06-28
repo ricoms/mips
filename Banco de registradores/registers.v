@@ -15,7 +15,7 @@ module registers (
 	
 	reg [31:0] registerFile[31:0];
 	
-	assign toDisplay = registerFile[0];
+	assign toDisplay = registerFile[31];
 	assign readData1 = registerFile[readRegister1];
 	assign readData2 = registerFile[readRegister2];
 	

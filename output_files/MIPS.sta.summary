@@ -3,19 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'DeBounce:db2|DB_out'
-Slack : -132.828
-TNS   : -30316.694
+Slack : -135.190
+TNS   : -30624.423
 
 Type  : Slow 1200mV 85C Model Setup 'clk_fpga'
-Slack : -2.294
-TNS   : -28.697
+Slack : -2.673
+TNS   : -29.479
 
 Type  : Slow 1200mV 85C Model Hold 'DeBounce:db2|DB_out'
-Slack : 0.421
-TNS   : 0.000
+Slack : -0.161
+TNS   : -3.519
 
 Type  : Slow 1200mV 85C Model Hold 'clk_fpga'
-Slack : 0.438
+Slack : 0.437
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_fpga'
@@ -24,22 +24,22 @@ TNS   : -38.980
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DeBounce:db2|DB_out'
 Slack : -2.693
-TNS   : -372.103
+TNS   : -373.388
 
 Type  : Slow 1200mV 0C Model Setup 'DeBounce:db2|DB_out'
-Slack : -119.934
-TNS   : -27371.879
+Slack : -122.010
+TNS   : -27624.852
 
 Type  : Slow 1200mV 0C Model Setup 'clk_fpga'
-Slack : -2.054
-TNS   : -23.695
+Slack : -2.407
+TNS   : -24.446
+
+Type  : Slow 1200mV 0C Model Hold 'DeBounce:db2|DB_out'
+Slack : -0.149
+TNS   : -2.966
 
 Type  : Slow 1200mV 0C Model Hold 'clk_fpga'
 Slack : 0.404
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'DeBounce:db2|DB_out'
-Slack : 0.431
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_fpga'
@@ -48,19 +48,19 @@ TNS   : -38.980
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DeBounce:db2|DB_out'
 Slack : -2.649
-TNS   : -371.839
+TNS   : -373.124
 
 Type  : Fast 1200mV 0C Model Setup 'DeBounce:db2|DB_out'
-Slack : -65.405
-TNS   : -14905.221
+Slack : -66.829
+TNS   : -15105.114
 
 Type  : Fast 1200mV 0C Model Setup 'clk_fpga'
-Slack : -0.712
-TNS   : -1.586
+Slack : -0.923
+TNS   : -2.199
 
 Type  : Fast 1200mV 0C Model Hold 'DeBounce:db2|DB_out'
-Slack : 0.161
-TNS   : 0.000
+Slack : -0.144
+TNS   : -3.839
 
 Type  : Fast 1200mV 0C Model Hold 'clk_fpga'
 Slack : 0.194
@@ -72,6 +72,6 @@ TNS   : -32.708
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DeBounce:db2|DB_out'
 Slack : -1.000
-TNS   : -283.000
+TNS   : -284.000
 
 ------------------------------------------------------------

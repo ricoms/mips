@@ -74,7 +74,6 @@ set_global_assignment -name VERILOG_FILE Multiplexador/MUX32.v
 set_global_assignment -name VERILOG_FILE Output/sevenSegmentDisplay.v
 set_global_assignment -name VERILOG_FILE Output/BCD.v
 set_global_assignment -name VERILOG_FILE Output/Output.v
-set_location_assignment PIN_Y23 -to program
 set_location_assignment PIN_AA22 -to user_number[5]
 set_location_assignment PIN_AA23 -to user_number[4]
 set_location_assignment PIN_AA24 -to user_number[3]
@@ -159,4 +158,6 @@ set_location_assignment PIN_E22 -to clock
 set_global_assignment -name VERILOG_FILE Debouncer/Debouncer.v
 set_location_assignment PIN_R24 -to Dreset
 set_location_assignment PIN_N21 -to Dclock
+set_location_assignment PIN_Y23 -to progr[1]
+set_location_assignment PIN_Y24 -to progr[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
