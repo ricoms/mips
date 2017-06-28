@@ -8,9 +8,9 @@ module program_counter(clock, address, interrupt, reset, programCounter, progr);
 	always @ ( posedge clock ) begin
 		if (reset) begin
 			case (progr)
-				2'b00: programCounter <= -1;
-				2'b01: programCounter <= 14;
-				2'b11: programCounter <= 29;
+				2'b00: programCounter <= 0;
+				2'b01: programCounter <= 15;
+				2'b11: programCounter <= 30;
 			endcase
 		end
 		else begin

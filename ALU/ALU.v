@@ -15,7 +15,6 @@ module ALU (
 	
 	always @ (*) begin
 		case (operation)
-			6'b000000: result = data1; 		   // passa direto - ld
 			6'b000001: result = data1 + data2;  // add
 			6'b000010: result = data1 - data2;  // sub
 			6'b000011: result = data1 & data2;  // and
@@ -27,7 +26,7 @@ module ALU (
 			6'b001001: result = data1 * data2;  // multiplicacao
 			6'b001010: result = data1 / data2;  // divisao
 			6'b001011: result = data1 % data2;  // modulo
-			default: result = 0;
+			default: result = data1; 		      // passa direto - ld
 		endcase
 		case (ALUOp)
 			2'b10: begin
