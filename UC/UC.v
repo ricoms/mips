@@ -83,7 +83,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				jump 		= 1'b0;
 				aluOp 	= 2'b10;
 			end
-			default:begin // jump
+			6'b000110:begin // jump
 				regDst  	= 1'b0;
 				aluSrc 	= 1'b0;
 				memtoReg = 1'b0;
@@ -92,6 +92,17 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b0;
 				jump 		= 1'b1;
+				aluOp 	= 2'b00;
+			end
+			default:begin 
+				regDst  	= 1'b0;
+				aluSrc 	= 1'b0;
+				memtoReg = 1'b0;
+				regWrite = 1'b0;
+				memRead 	= 1'b0;
+				memWrite = 1'b0;
+				branch 	= 1'b0;
+				jump 		= 1'b0;
 				aluOp 	= 2'b00;
 			end
 		endcase
