@@ -11,7 +11,7 @@ module MIPS (
 	wire zero;
 	wire [31:0] PC_backfrom_add1, PC_goto_add1, instrucao, data1, data2, memDataOut,
 	muxBranch_out, muxJump_out, aluAddResult, mainAluResult, output32, toDisplay,
-	returnToRegisters;
+	returnToRegisters, muxRegDst_out;
 	
 	DeBounce(.clk(clk_fpga), .n_reset(1), .button_in(Dreset), .DB_out(reset));
 	//input clk, n_reset, button_in, // inputs
@@ -65,7 +65,7 @@ module MIPS (
 	MUX32bits finalMux(.data1(mainAluResult), .data2(memDataOut),
 						     .sign(memtoReg), .mux_out(returnToRegisters));
 							 
-	Output(.binary(32'b0 + muxRegDst_out), .ones(ones), .tens(tens),
+	Output(.binary(muxRegDst_out), .ones(ones), .tens(tens),
 			 .hundreds(hundreds), .thousands(thousands)); 
 	
 	Output(.binary(PC_goto_add1), .ones(programOnes), .tens(programTens),

@@ -36,8 +36,8 @@ module ALU (
 	end
 	always @ (operation or data1 or data2 or ALUOp) begin
 		case (ALUOp)
-			2'b10: zero = data1 == data2 ? 0 : 1;   // BNE
-			default: zero = data1 == data2 ? 1 : 0; // BEQ
+			2'b10: zero = (data1 == data2) ? 0 : 1;   // BNE
+			default: zero = (data1 == data2) ? 1 : 0; // BEQ
 		endcase
 	end
 

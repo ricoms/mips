@@ -13,11 +13,15 @@ module registers (
 	output reg [31:0] readData1, readData2;
 	output reg [31:0] toDisplay;
 	
-	reg[31:0] registerFile[31:0];
+	reg [31:0] registerFile[31:0];
 	
-	always @ (posedge clock) begin
+	always @ (RegWrite) begin
 		if(RegWrite == 1)
 			registerFile[writeRegister] = writeData;
+	end
+	always @ (posedge clock) begin
+		//if(RegWrite == 1)
+			//registerFile[writeRegister] = writeData;
 		registerFile[30] = user_number;
 		toDisplay = registerFile[31];
 		readData1 = registerFile[readRegister1];

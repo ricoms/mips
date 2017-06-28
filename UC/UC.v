@@ -72,7 +72,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 			end
 			6'b000100:begin // branch if equal
 				regDst  	= 1'b0;
-				aluSrc 	= 1'b1;
+				aluSrc 	= 1'b0;
 				memtoReg = 1'b0;
 				regWrite = 1'b0;
 				memRead 	= 1'b0;
@@ -83,7 +83,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 			end
 			6'b000110:begin // branch if not equal
 				regDst  	= 1'b0;
-				aluSrc 	= 1'b1;
+				aluSrc 	= 1'b0;
 				memtoReg = 1'b0;
 				regWrite = 1'b0;
 				memRead 	= 1'b0;

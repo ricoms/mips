@@ -8,6 +8,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "ones[2]",
+					"strict" : false
+				},
+				{
 					"name" : "ones[3]",
 					"strict" : false
 				},
@@ -17,6 +21,26 @@
 				},
 				{
 					"name" : "ones[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ones[6]",
+					"strict" : false
+				},
+				{
+					"name" : "tens[2]",
+					"strict" : false
+				},
+				{
+					"name" : "tens[4]",
+					"strict" : false
+				},
+				{
+					"name" : "tens[5]",
+					"strict" : false
+				},
+				{
+					"name" : "tens[6]",
 					"strict" : false
 				},
 				{
