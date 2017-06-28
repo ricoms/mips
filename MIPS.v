@@ -65,7 +65,7 @@ module MIPS (
 	MUX32bits finalMux(.data1(mainAluResult), .data2(memDataOut),
 						     .sign(memtoReg), .mux_out(returnToRegisters));
 							 
-	Output(.binary(muxRegDst_out), .ones(ones), .tens(tens),
+	Output(.binary(mainAluResult), .ones(ones), .tens(tens), // toDisplay
 			 .hundreds(hundreds), .thousands(thousands)); 
 	
 	Output(.binary(PC_goto_add1), .ones(programOnes), .tens(programTens),
