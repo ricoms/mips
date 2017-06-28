@@ -27,14 +27,24 @@ module ALU (
 			6'b001001: result = data1 * data2;  // multiplicacao
 			6'b001010: result = data1 / data2;  // divisao
 			6'b001011: result = data1 % data2;  // modulo
+			default: result = 0;
 		endcase
 		case (ALUOp)
-			2'b10: zero = (data1 == data2) ? 0 : 1;   // BNE
-			2'b01: aluResult = data2; // passa imediato original - ldi
+			2'b10: begin
+				zero = (data1 == data2) ? 1'b0 : 1'b1;   // BNE
+				aluResult = result;
+			end
+			2'b01: begin
+				zero = (data1 == data2) ? 1'b1 : 1'b0; // BEQ
+				aluResult = data2; // passa imediato original - ldi
 			  // passa imediato (* 4) (usado para endereco) - (ld  e st)
-			2'b11: aluResult = data2;
+			end
+			2'b11: begin
+				zero = (data1 == data2) ? 1'b1 : 1'b0; // BEQ
+				aluResult = data2;
+			end
 			default: begin
-				zero = (data1 == data2) ? 1 : 0; // BEQ
+				zero = (data1 == data2) ? 1'b1 : 1'b0; // BEQ
 				aluResult = result;
 			end
 		endcase

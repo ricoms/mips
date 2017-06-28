@@ -356,7 +356,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "progr",
+					"name" : "progr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "progr[1]",
 					"strict" : false
 				},
 				{
