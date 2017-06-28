@@ -1,18 +1,25 @@
 module MIPS (
-	input wire clk_fpga, reset, interrupt,
+	input wire clk_fpga, Dreset, interrupt, Dclock,
 	input wire [5:0] user_number,
 	input wire program,
 	output wire [6:0] ones, tens, hundreds, thousands, programOnes,
 	programTens, programHundreds, programThousands, userOnes, userTens,
-	userHundreds, userThousands
+	userHundreds, userThousand,
+	output wire clock, jump, branch, memRead, memtoReg, memWrite, aluSrc, regWrite, regDst, reset,
+	output wire [1:0] aluOp
 );
-	wire clock, regDst, jump, branch, memRead, memtoReg, memWrite, aluSrc, regWrite, zero;
-	wire [1:0] aluOp;
+	wire zero;
 	wire [31:0] PC_backfrom_add1, PC_goto_add1, instrucao, data1, data2, memDataOut,
 	muxBranch_out, muxJump_out, aluAddResult, mainAluResult, output32, toDisplay,
 	returnToRegisters;
-
-	divisor_frequencia df(clk_fpga, clock);
+	
+	DeBounce(.clk(clk_fpga), .n_reset(1), .button_in(Dreset), .DB_out(reset));
+	//input clk, n_reset, button_in, // inputs
+	//output reg 	DB_out // output
+ 
+	//divisor_frequencia df(.clk_alta_f(clk_fpga), .clk_baixa_f(clock));
+	
+	DeBounce(.clk(clk_fpga), .n_reset(1), .button_in(Dclock), .DB_out(clock));
 	
 	ALUadd1(.data1(PC_goto_add1), .aluResult(PC_backfrom_add1));
 	
@@ -26,7 +33,7 @@ module MIPS (
 			 .aluResult(aluAddResult));
 	
 	program_counter pc(.clock(clock), .address(muxJump_out),
-							 .interrupt(interrupt), .reset(reset),
+							 .interrupt(interrupt), .reset(~reset),
 							 .programCounter(PC_goto_add1), .program(program));
 	
 	Instructions_memory(.clock(clock), .address(PC_goto_add1), .instrucao(instrucao));

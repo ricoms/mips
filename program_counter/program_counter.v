@@ -12,8 +12,6 @@ module program_counter(clock, address, interrupt, reset, programCounter, program
 				1'b1: programCounter <= 10;
 			endcase
 		end
-		else if (interrupt) begin
-		end
 		else begin
 			programCounter <= address;
 		end

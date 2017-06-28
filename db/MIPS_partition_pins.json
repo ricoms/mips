@@ -76,6 +76,54 @@
 					"strict" : false
 				},
 				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "jump",
+					"strict" : false
+				},
+				{
+					"name" : "branch",
+					"strict" : false
+				},
+				{
+					"name" : "memRead",
+					"strict" : false
+				},
+				{
+					"name" : "memtoReg",
+					"strict" : false
+				},
+				{
+					"name" : "memWrite",
+					"strict" : false
+				},
+				{
+					"name" : "aluSrc",
+					"strict" : false
+				},
+				{
+					"name" : "regWrite",
+					"strict" : false
+				},
+				{
+					"name" : "regDst",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "aluOp[0]",
+					"strict" : false
+				},
+				{
+					"name" : "aluOp[1]",
+					"strict" : false
+				},
+				{
 					"name" : "program",
 					"strict" : false
 				},
@@ -101,6 +149,18 @@
 				},
 				{
 					"name" : "user_number[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_fpga",
+					"strict" : false
+				},
+				{
+					"name" : "Dclock",
+					"strict" : false
+				},
+				{
+					"name" : "Dreset",
 					"strict" : false
 				}
 			]
