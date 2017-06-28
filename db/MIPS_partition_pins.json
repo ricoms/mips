@@ -4,7 +4,31 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "ones[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ones[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ones[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ones[5]",
+					"strict" : false
+				},
+				{
 					"name" : "programOnes[0]",
+					"strict" : false
+				},
+				{
+					"name" : "programOnes[1]",
+					"strict" : false
+				},
+				{
+					"name" : "programOnes[2]",
 					"strict" : false
 				},
 				{
@@ -17,6 +41,94 @@
 				},
 				{
 					"name" : "programOnes[5]",
+					"strict" : false
+				},
+				{
+					"name" : "programOnes[6]",
+					"strict" : false
+				},
+				{
+					"name" : "programTens[0]",
+					"strict" : false
+				},
+				{
+					"name" : "programTens[1]",
+					"strict" : false
+				},
+				{
+					"name" : "programTens[2]",
+					"strict" : false
+				},
+				{
+					"name" : "programTens[3]",
+					"strict" : false
+				},
+				{
+					"name" : "programTens[4]",
+					"strict" : false
+				},
+				{
+					"name" : "programTens[5]",
+					"strict" : false
+				},
+				{
+					"name" : "programTens[6]",
+					"strict" : false
+				},
+				{
+					"name" : "programHundreds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "programHundreds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "programHundreds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "programHundreds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "programHundreds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "programHundreds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "programHundreds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "programThousands[0]",
+					"strict" : false
+				},
+				{
+					"name" : "programThousands[1]",
+					"strict" : false
+				},
+				{
+					"name" : "programThousands[2]",
+					"strict" : false
+				},
+				{
+					"name" : "programThousands[3]",
+					"strict" : false
+				},
+				{
+					"name" : "programThousands[4]",
+					"strict" : false
+				},
+				{
+					"name" : "programThousands[5]",
+					"strict" : false
+				},
+				{
+					"name" : "programThousands[6]",
 					"strict" : false
 				},
 				{
@@ -124,10 +236,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "program",
-					"strict" : false
-				},
-				{
 					"name" : "user_number[0]",
 					"strict" : false
 				},
@@ -149,6 +257,10 @@
 				},
 				{
 					"name" : "user_number[3]",
+					"strict" : false
+				},
+				{
+					"name" : "program",
 					"strict" : false
 				},
 				{

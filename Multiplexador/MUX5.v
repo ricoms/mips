@@ -6,8 +6,8 @@ module MUX5bits (
 
 	always @ (data1 or data2) begin
 		case (sign)
-		   1'b0: mux_out = data1;
-			1'b1: mux_out = data2;
+		   1'b0: mux_out <= data1;
+			1'b1: mux_out <= data2;
 		endcase
 	end	
 endmodule

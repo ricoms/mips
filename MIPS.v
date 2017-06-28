@@ -43,10 +43,10 @@ module MIPS (
 							  .memtoReg(memtoReg), .aluOp(aluOp), .memWrite(memWrite),
 							  .aluSrc(aluSrc), .regWrite(regWrite));
 	
-	MUX32bits muxRegDst(.data1(instrucao[20:16]), .data2(instrucao[15:11]),
-						   .sign(regDst), .mux_out(muxRegDst_out));
+	MUX5bits muxRegDst(.data1(instrucao[20:16]), .data2(instrucao[15:11]),
+						    .sign(regDst), .mux_out(muxRegDst_out));
 	
-	registers ( .readRegister1(instrucao[25:21]), .readRegister2(instrucao[20:16]),
+	registers (.readRegister1(instrucao[25:21]), .readRegister2(instrucao[20:16]),
 	   .writeRegister(muxRegDst_out), .clock(clock), .RegWrite(regWrite), .user_number(user_number),
 		.writeData(returnToRegisters), .readData1(data1), .readData2(data2), .toDisplay(toDisplay)
 	);
@@ -54,20 +54,21 @@ module MIPS (
 	bitExtender be(.input16(instrucao[15:0]), .output32(output32));
 		
 	MUX32bits ULASrc(.data1(data2), .data2(output32),
-						     .sign(aluSrc), .mux_out(ULASrc_out));
+						  .sign(aluSrc), .mux_out(ULASrc_out));
 							  
 	ALU(.data1(data1), .data2(ULASrc_out), .operation(operation),
 		 .zero(zero), .aluResult(mainAluResult));
 	
-	mainMemory(.clock(clock), .data_in(data2), .address(mainAluResult), .MemWrite(memWrite), .data_out(memDataOut));
+	mainMemory(.clock(clock), .data_in(data2), .address(mainAluResult),
+				  .MemWrite(memWrite), .data_out(memDataOut));
 	
-	MUX32bits finalMux(.data1(memDataOut), .data2(mainAluResult),
+	MUX32bits finalMux(.data1(mainAluResult), .data2(memDataOut),
 						     .sign(memtoReg), .mux_out(returnToRegisters));
 							 
-	Output(.binary(toDisplay), .ones(ones), .tens(tens),
+	Output(.binary(32'b0 + muxRegDst_out), .ones(ones), .tens(tens),
 			 .hundreds(hundreds), .thousands(thousands)); 
 	
-	Output(.binary(32'b0 + program), .ones(programOnes), .tens(programTens),
+	Output(.binary(PC_goto_add1), .ones(programOnes), .tens(programTens),
 			 .hundreds(programHundreds), .thousands(programThousands)); 
 			 
 	Output(.binary(32'b0 + user_number), .ones(userOnes), .tens(userTens),

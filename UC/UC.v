@@ -5,6 +5,15 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 	output reg [1:0] aluOp;
 	
 	always@ (instrucao) begin
+		regDst  	= 1'b0;
+		aluSrc 	= 1'b0;
+		memtoReg = 1'b0;
+		regWrite = 1'b0;
+		memRead 	= 1'b0;
+		memWrite = 1'b0;
+		branch 	= 1'b0;
+		jump 		= 1'b0;
+		aluOp 	= 2'b00;
 		case(instrucao)
 			6'b000000:begin // R-type logic arithmetic
 				regDst  	= 1'b1;

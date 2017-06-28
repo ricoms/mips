@@ -1,6 +1,6 @@
 module MUX32bits (
-	input wire [31:0] data1, data2,
-	input wire sign,
+	input [31:0] data1, data2,
+	input sign,
 	output reg [31:0] mux_out
 );
 

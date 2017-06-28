@@ -2,28 +2,36 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'DeBounce:comb_4|DB_out'
-Slack : -12.773
-TNS   : -20903.014
+Type  : Slow 1200mV 85C Model Setup 'Instructions_memory:comb_9|instrucao[26]'
+Slack : -6.350
+TNS   : -30.328
 
-Type  : Slow 1200mV 85C Model Setup 'program_counter:pc|programCounter[0]'
-Slack : -3.949
-TNS   : -30.250
+Type  : Slow 1200mV 85C Model Setup 'DeBounce:comb_4|DB_out'
+Slack : -5.282
+TNS   : -363.568
+
+Type  : Slow 1200mV 85C Model Setup 'Instructions_memory:comb_9|instrucao[11]'
+Slack : -4.439
+TNS   : -243.215
 
 Type  : Slow 1200mV 85C Model Setup 'clk_fpga'
-Slack : -2.451
-TNS   : -29.166
+Slack : -2.280
+TNS   : -28.193
 
 Type  : Slow 1200mV 85C Model Hold 'DeBounce:comb_4|DB_out'
-Slack : -0.109
-TNS   : -0.109
-
-Type  : Slow 1200mV 85C Model Hold 'program_counter:pc|programCounter[0]'
-Slack : -0.024
-TNS   : -0.024
+Slack : -0.257
+TNS   : -4.182
 
 Type  : Slow 1200mV 85C Model Hold 'clk_fpga'
-Slack : 0.402
+Slack : 0.439
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Instructions_memory:comb_9|instrucao[11]'
+Slack : 0.450
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Instructions_memory:comb_9|instrucao[26]'
+Slack : 0.541
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_fpga'
@@ -31,35 +39,47 @@ Slack : -3.000
 TNS   : -38.980
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DeBounce:comb_4|DB_out'
-Slack : -1.285
-TNS   : -3429.665
+Slack : -2.693
+TNS   : -162.648
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'program_counter:pc|programCounter[0]'
-Slack : 0.151
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Instructions_memory:comb_9|instrucao[26]'
+Slack : -0.177
+TNS   : -2.962
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Instructions_memory:comb_9|instrucao[11]'
+Slack : 0.345
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'DeBounce:comb_4|DB_out'
-Slack : -11.474
-TNS   : -19053.244
+Type  : Slow 1200mV 0C Model Setup 'Instructions_memory:comb_9|instrucao[26]'
+Slack : -6.050
+TNS   : -28.834
 
-Type  : Slow 1200mV 0C Model Setup 'program_counter:pc|programCounter[0]'
-Slack : -3.815
-TNS   : -29.546
+Type  : Slow 1200mV 0C Model Setup 'DeBounce:comb_4|DB_out'
+Slack : -4.721
+TNS   : -319.682
+
+Type  : Slow 1200mV 0C Model Setup 'Instructions_memory:comb_9|instrucao[11]'
+Slack : -4.125
+TNS   : -223.756
 
 Type  : Slow 1200mV 0C Model Setup 'clk_fpga'
-Slack : -2.170
-TNS   : -24.501
+Slack : -2.003
+TNS   : -23.144
 
 Type  : Slow 1200mV 0C Model Hold 'DeBounce:comb_4|DB_out'
-Slack : -0.123
-TNS   : -0.123
+Slack : -0.261
+TNS   : -3.272
 
-Type  : Slow 1200mV 0C Model Hold 'program_counter:pc|programCounter[0]'
-Slack : -0.016
-TNS   : -0.016
+Type  : Slow 1200mV 0C Model Hold 'Instructions_memory:comb_9|instrucao[11]'
+Slack : 0.402
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk_fpga'
-Slack : 0.353
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Instructions_memory:comb_9|instrucao[26]'
+Slack : 0.633
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_fpga'
@@ -67,47 +87,63 @@ Slack : -3.000
 TNS   : -38.980
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DeBounce:comb_4|DB_out'
-Slack : -1.285
-TNS   : -3429.665
+Slack : -2.649
+TNS   : -162.384
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'program_counter:pc|programCounter[0]'
-Slack : 0.107
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Instructions_memory:comb_9|instrucao[26]'
+Slack : -0.125
+TNS   : -1.946
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Instructions_memory:comb_9|instrucao[11]'
+Slack : 0.267
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'DeBounce:comb_4|DB_out'
-Slack : -6.029
-TNS   : -9582.030
+Type  : Fast 1200mV 0C Model Setup 'Instructions_memory:comb_9|instrucao[26]'
+Slack : -2.887
+TNS   : -10.598
 
-Type  : Fast 1200mV 0C Model Setup 'program_counter:pc|programCounter[0]'
-Slack : -1.571
-TNS   : -11.407
+Type  : Fast 1200mV 0C Model Setup 'DeBounce:comb_4|DB_out'
+Slack : -2.125
+TNS   : -145.244
+
+Type  : Fast 1200mV 0C Model Setup 'Instructions_memory:comb_9|instrucao[11]'
+Slack : -1.491
+TNS   : -66.492
 
 Type  : Fast 1200mV 0C Model Setup 'clk_fpga'
-Slack : -0.803
-TNS   : -2.135
+Slack : -0.673
+TNS   : -1.504
 
 Type  : Fast 1200mV 0C Model Hold 'DeBounce:comb_4|DB_out'
-Slack : -0.103
-TNS   : -0.103
+Slack : -0.132
+TNS   : -2.741
 
-Type  : Fast 1200mV 0C Model Hold 'program_counter:pc|programCounter[0]'
-Slack : -0.034
-TNS   : -0.061
+Type  : Fast 1200mV 0C Model Hold 'Instructions_memory:comb_9|instrucao[11]'
+Slack : 0.105
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Instructions_memory:comb_9|instrucao[26]'
+Slack : 0.175
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk_fpga'
-Slack : 0.181
+Slack : 0.195
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_fpga'
 Slack : -3.000
-TNS   : -32.738
+TNS   : -32.711
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DeBounce:comb_4|DB_out'
 Slack : -1.000
-TNS   : -2669.000
+TNS   : -120.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'program_counter:pc|programCounter[0]'
-Slack : 0.114
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Instructions_memory:comb_9|instrucao[26]'
+Slack : 0.085
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Instructions_memory:comb_9|instrucao[11]'
+Slack : 0.173
 TNS   : 0.000
 
 ------------------------------------------------------------

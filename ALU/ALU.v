@@ -13,12 +13,12 @@ module ALU (
 	output reg [31:0] aluResult;
 	
 	always @ (operation or data1 or data2 or ALUOp) begin
-		case (ALUOp[1:0])
+		case (ALUOp)
 			2'b01: aluResult = data2;     // passa imediato original - ldi
             // passa imediato (* 4) (usado para endereco) - (ld  e st)
 			2'b11: aluResult = data2;
 			default:
-			case (operation[5:0])
+			case (operation)
 				6'b000000: aluResult = data1; 		   // passa direto - ld
 				6'b000001: aluResult = data1 + data2;  // add
 				6'b000010: aluResult = data1 - data2;  // sub
@@ -35,9 +35,9 @@ module ALU (
 		endcase
 	end
 	always @ (operation or data1 or data2 or ALUOp) begin
-		case (ALUOp[1:0])
-			2'b10: zero = data1 - data2 == 0 ? 0 : 1;   // BNE
-			default: zero = data1 - data2 == 0 ? 1 : 0; // BEQ
+		case (ALUOp)
+			2'b10: zero = data1 == data2 ? 0 : 1;   // BNE
+			default: zero = data1 == data2 ? 1 : 0; // BEQ
 		endcase
 	end
 
