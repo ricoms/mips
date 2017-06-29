@@ -52,14 +52,14 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 			end
 			6'b101010:begin // store word
 				regDst  	= 1'b0;
-				aluSrc 	= 1'b0;
+				aluSrc 	= 1'b1;
 				memtoReg = 1'b0;
 				regWrite = 1'b0;
 				memRead 	= 1'b0;
 				memWrite = 1'b1;
 				branch 	= 1'b0;
 				jump 		= 1'b0;
-				aluOp 	= 2'b00;
+				aluOp 	= 2'b11;
 			end
 			6'b000100:begin // branch if equal
 				regDst  	= 1'b0;
@@ -83,7 +83,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				jump 		= 1'b0;
 				aluOp 	= 2'b10;
 			end
-			6'b000110:begin // jump
+			6'b010000:begin // jump
 				regDst  	= 1'b0;
 				aluSrc 	= 1'b0;
 				memtoReg = 1'b0;

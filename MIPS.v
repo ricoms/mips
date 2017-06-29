@@ -16,25 +16,23 @@ module MIPS (
 	DeBounce db1(.clk(clk_fpga), .n_reset(1), .button_in(Dreset), .DB_out(reset));
 	//input clk, n_reset, button_in, // inputs
 	//output reg 	DB_out // output
- 
 	//divisor_frequencia df(.clk_alta_f(clk_fpga), .clk_baixa_f(clock));
 	
 	DeBounce db2(.clk(clk_fpga), .n_reset(1), .button_in(Dclock), .DB_out(clock));
-	
-	ALUadd1 AluAdd1(.data1(PC_goto_add1), .aluResult(PC_backfrom_add1));
-	
-	MUX32bits muxBranch(.data1(PC_backfrom_add1), .data2(aluAddResult),
-						     .sign(branch & zero), .mux_out(muxBranch_out));
-	MUX32bits muxJump(.data1(muxBranch_out),
-						   .data2({{PC_backfrom_add1[31:28]}, {2'b00}, {instrucao[25:0] }}), //<< 2}}),
-						   .sign(jump), .mux_out(muxJump_out));
-	
-	ALUadd ALUadd(.data1(PC_backfrom_add1), .data2(output32), // << 2),
-			 .aluResult(aluAddResult));
-	
+		
 	program_counter pc(.clock(clock), .address(muxJump_out),
 							 .interrupt(interrupt), .reset(~reset),
 							 .programCounter(PC_goto_add1), .progr(progr));
+							 
+	ALUadd1 AluAdd1(.data1(PC_goto_add1), .aluResult(PC_backfrom_add1));
+	
+	ALUadd ALUadd(.data1(PC_backfrom_add1), .data2(output32), // << 2),
+			 .aluResult(aluAddResult));
+			 
+	MUX32bits muxBranch(.data1(PC_backfrom_add1), .data2(aluAddResult),
+						     .sign(branch & zero), .mux_out(muxBranch_out));
+	MUX32bits muxJump(.data1(muxBranch_out), .data2({{PC_backfrom_add1[31:28]}, {2'b00}, {instrucao[25:0]}}), //<< 2}}),
+						   .sign(jump), .mux_out(muxJump_out));
 	
 	Instructions_memory IM(.clock(clock), .address(PC_goto_add1), .instrucao(instrucao));
 	
@@ -65,7 +63,7 @@ module MIPS (
 	MUX32bits finalMux(.data1(mainAluResult), .data2(memDataOut),
 						     .sign(memtoReg), .mux_out(returnToRegisters));
 							 
-	Output out1(.binary(toDisplay), .ones(ones), .tens(tens), // ULASrc_out, toDisplay
+	Output out1(.binary(data2), .ones(ones), .tens(tens), // returnToRegisters, ULASrc_out, toDisplay
 			 .hundreds(hundreds), .thousands(thousands)); 
 	
 	Output out2(.binary(PC_goto_add1), .ones(programOnes), .tens(programTens),

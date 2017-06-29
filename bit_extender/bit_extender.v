@@ -2,7 +2,7 @@ module bitExtender (
 	input16,
 	output32
 );
-	input wire [15:0] input16;
+	input [15:0] input16;
 	output reg [31:0] output32;
 			
 	always @ ( * ) begin

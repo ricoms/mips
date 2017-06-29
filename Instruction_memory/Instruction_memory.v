@@ -1,15 +1,15 @@
 module Instructions_memory(clock, address, instrucao);
 	input clock;
 	input [9:0] address;
+	output [31:0] instrucao;
+	integer clock0 = 0;
 	
-	output reg [31:0] instrucao;
-	//integer clock0 = 0;
 	reg [31:0] RAM[80:0];
 	
-	always @ ( posedge clock ) begin
-		if (address == 0) begin
+	always @ (posedge clock) begin
+		if (clock0 == 0) begin
 		// programa 1: fibonacci
-			RAM[1] = 32'b100011_00000_11111_0000000000000000;
+			RAM[1] = 32'b100011_00000_11111_0000000000001000;
 			// ldi $0, $0, 0
 			RAM[2] = 32'b101010_00000_11110_0000000000000000;
 			// st user_number $30
@@ -68,9 +68,9 @@ module Instructions_memory(clock, address, instrucao);
 			RAM[35] = 32'b000000_11111_00001_11111_00000_001000;
 			// shift left $31 >> 2
 			
-			//clock0 <= 0;
+			clock0 <= 0;
 		end
-		instrucao = RAM[address];
 	end
+	assign instrucao = RAM[address];
 	
 endmodule
