@@ -3,75 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'DeBounce:db2|DB_out'
-Slack : -144.648
-TNS   : -217076.207
+Slack : -148.925
+TNS   : -222707.791
 
 Type  : Slow 1200mV 85C Model Setup 'clk_fpga'
-Slack : -2.117
-TNS   : -28.364
+Slack : -2.290
+TNS   : -28.329
 
 Type  : Slow 1200mV 85C Model Hold 'clk_fpga'
 Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'DeBounce:db2|DB_out'
-Slack : 0.661
+Slack : 0.549
 TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DeBounce:db2|DB_out'
-Slack : -3.000
-TNS   : -2254.830
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_fpga'
 Slack : -3.000
 TNS   : -38.980
 
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'DeBounce:db2|DB_out'
+Slack : -1.285
+TNS   : -2022.590
+
 Type  : Slow 1200mV 0C Model Setup 'DeBounce:db2|DB_out'
-Slack : -130.706
-TNS   : -196082.129
+Slack : -134.820
+TNS   : -201443.867
 
 Type  : Slow 1200mV 0C Model Setup 'clk_fpga'
-Slack : -1.842
-TNS   : -23.282
+Slack : -2.075
+TNS   : -23.295
 
 Type  : Slow 1200mV 0C Model Hold 'clk_fpga'
-Slack : 0.355
+Slack : 0.354
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'DeBounce:db2|DB_out'
-Slack : 0.605
+Slack : 0.506
 TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DeBounce:db2|DB_out'
-Slack : -3.000
-TNS   : -2254.830
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_fpga'
 Slack : -3.000
 TNS   : -38.980
 
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'DeBounce:db2|DB_out'
+Slack : -1.285
+TNS   : -2022.590
+
 Type  : Fast 1200mV 0C Model Setup 'DeBounce:db2|DB_out'
-Slack : -72.155
-TNS   : -107888.872
+Slack : -74.368
+TNS   : -110843.275
 
 Type  : Fast 1200mV 0C Model Setup 'clk_fpga'
-Slack : -0.615
-TNS   : -1.490
+Slack : -0.703
+TNS   : -1.498
+
+Type  : Fast 1200mV 0C Model Hold 'DeBounce:db2|DB_out'
+Slack : 0.180
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk_fpga'
 Slack : 0.182
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'DeBounce:db2|DB_out'
-Slack : 0.302
-TNS   : 0.000
-
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_fpga'
 Slack : -3.000
-TNS   : -32.738
+TNS   : -32.721
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DeBounce:db2|DB_out'
 Slack : -1.000
-TNS   : -1688.000
+TNS   : -1574.000
 
 ------------------------------------------------------------

@@ -15,7 +15,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b0;
 				jump 		= 1'b0;
-				aluOp 	= 2'b10;
+				aluOp 	= 2'b00;
 			end
 			6'b000001:begin // I-type logic arithmetic
 				regDst  	= 1'b1;
@@ -26,7 +26,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b0;
 				jump 		= 1'b0;
-				aluOp 	= 2'b10;
+				aluOp 	= 2'b00;
 			end
 			6'b100010:begin // load word
 				regDst  	= 1'b0;
@@ -48,7 +48,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b0;
 				jump 		= 1'b0;
-				aluOp 	= 2'b01;
+				aluOp 	= 2'b11;
 			end
 			6'b101010:begin // store word
 				regDst  	= 1'b0;
@@ -70,7 +70,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b1;
 				jump 		= 1'b0;
-				aluOp 	= 2'b00;
+				aluOp 	= 2'b11;
 			end
 			6'b000110:begin // branch if not equal
 				regDst  	= 1'b0;
@@ -81,7 +81,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b1;
 				jump 		= 1'b0;
-				aluOp 	= 2'b10;
+				aluOp 	= 2'b01;
 			end
 			6'b010000:begin // jump
 				regDst  	= 1'b0;
