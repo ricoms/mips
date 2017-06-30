@@ -332,6 +332,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "aluOp[2]",
+					"strict" : false
+				},
+				{
 					"name" : "user_number[0]",
 					"strict" : false
 				},

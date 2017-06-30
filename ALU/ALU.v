@@ -23,9 +23,9 @@ module ALU (
 			6'b001001: aluResult = data1 * data2;    // multiplicacao
 			6'b001010: aluResult = data1 / data2;    // divisao
 			6'b001011: aluResult = data1 % data2;    // modulo
-			6'b100000: aluResult = data2;				  // passa data2 direto - ldi
-			6'b100001: aluResult = (data1 == data2); // passa data2 direto - ldi
-			6'b100010: aluResult = (data1 != data2); // passa data2 direto - ldi
+			6'b100000: aluResult = data2;				  // passa data2 direto - st - ldi
+			6'b100001: aluResult = data1 - data2;    // beq
+			6'b100010: aluResult = (data1 == data2); // bnq
 			default: aluResult = data1; 		        // passa direto - ld
 		endcase
 	end

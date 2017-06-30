@@ -54,8 +54,8 @@ module MIPS (
 		
 	MUX32bits ULASrc(.data1(data2), .data2(output32),
 						  .sign(aluSrc), .mux_out(ULASrc_out));
-	
-	ALUControl ALUC(.operation(instrucao[5:0]), .ALUOp(aluOp), .operation_out(ALUC_operacao));
+
+	ALUControl ALUC(.instr(instrucao[5:0]), .ALUOp(aluOp), .instr_out(ALUC_operacao));
 	
 	ALU MainALU(.data1(data1), .data2(ULASrc_out), .operation(ALUC_operacao),
 		 .zero(zero), .aluResult(mainAluResult));
@@ -65,8 +65,9 @@ module MIPS (
 	
 	MUX32bits finalMux(.data1(mainAluResult), .data2(memDataOut),
 						     .sign(memtoReg), .mux_out(returnToRegisters));
-							 
-	Output out1(.binary(toDisplay), .ones(ones), .tens(tens), // returnToRegisters, ULASrc_out, toDisplay
+							  
+	// returnToRegisters, ULASrc_out, toDisplay				 
+	Output out1(.binary(toDisplay), .ones(ones), .tens(tens), 
 			 .hundreds(hundreds), .thousands(thousands)); 
 	
 	Output out2(.binary(PC_goto_add1), .ones(programOnes), .tens(programTens),
