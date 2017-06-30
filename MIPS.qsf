@@ -129,7 +129,7 @@ set_location_assignment PIN_AH21 -to userOnes[3]
 set_location_assignment PIN_AE19 -to userOnes[4]
 set_location_assignment PIN_AF19 -to userOnes[5]
 set_location_assignment PIN_AE18 -to userOnes[6]
-set_location_assignment PIN_G21 -to reset
+set_location_assignment PIN_E25 -to reset
 set_global_assignment -name CDF_FILE Chain3.cdf
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
@@ -152,12 +152,14 @@ set_location_assignment PIN_H17 -to memRead
 set_location_assignment PIN_J16 -to memWrite
 set_location_assignment PIN_H16 -to branch
 set_location_assignment PIN_J15 -to jump
-set_location_assignment PIN_G17 -to aluOp[1]
-set_location_assignment PIN_J17 -to aluOp[0]
+set_location_assignment PIN_J17 -to aluOp[1]
+set_location_assignment PIN_H19 -to aluOp[0]
 set_location_assignment PIN_E22 -to clock
 set_global_assignment -name VERILOG_FILE Debouncer/Debouncer.v
 set_location_assignment PIN_R24 -to Dreset
 set_location_assignment PIN_N21 -to Dclock
 set_location_assignment PIN_Y23 -to progr[1]
 set_location_assignment PIN_Y24 -to progr[0]
+set_global_assignment -name VERILOG_FILE UC/ALUControl.v
+set_location_assignment PIN_G17 -to aluOp[2]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

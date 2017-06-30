@@ -2,7 +2,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 	input [5:0] instrucao;
 
 	output reg regDst, jump, branch, memRead, memtoReg, memWrite, aluSrc, regWrite;
-	output reg [1:0] aluOp;
+	output reg [2:0] aluOp;
 	
 	always@ (instrucao) begin
 		case(instrucao)
@@ -15,7 +15,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b0;
 				jump 		= 1'b0;
-				aluOp 	= 2'b00;
+				aluOp 	= 2'b000;
 			end
 			6'b000001:begin // I-type logic arithmetic
 				regDst  	= 1'b1;
@@ -26,7 +26,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b0;
 				jump 		= 1'b0;
-				aluOp 	= 2'b00;
+				aluOp 	= 2'b000;
 			end
 			6'b100010:begin // load word
 				regDst  	= 1'b0;
@@ -37,7 +37,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b0;
 				jump 		= 1'b0;
-				aluOp 	= 2'b11;
+				aluOp 	= 2'b001;
 			end
 			6'b100011:begin // load word immediate
 				regDst  	= 1'b0;
@@ -48,7 +48,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b0;
 				jump 		= 1'b0;
-				aluOp 	= 2'b11;
+				aluOp 	= 2'b011;
 			end
 			6'b101010:begin // store word
 				regDst  	= 1'b0;
@@ -59,7 +59,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b1;
 				branch 	= 1'b0;
 				jump 		= 1'b0;
-				aluOp 	= 2'b11;
+				aluOp 	= 2'b001;
 			end
 			6'b000100:begin // branch if equal
 				regDst  	= 1'b0;
@@ -70,7 +70,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b1;
 				jump 		= 1'b0;
-				aluOp 	= 2'b11;
+				aluOp 	= 2'b100;
 			end
 			6'b000110:begin // branch if not equal
 				regDst  	= 1'b0;
@@ -81,7 +81,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b1;
 				jump 		= 1'b0;
-				aluOp 	= 2'b01;
+				aluOp 	= 2'b101;
 			end
 			6'b010000:begin // jump
 				regDst  	= 1'b0;
@@ -92,7 +92,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b0;
 				jump 		= 1'b1;
-				aluOp 	= 2'b00;
+				aluOp 	= 2'b000;
 			end
 			default:begin 
 				regDst  	= 1'b0;
@@ -103,7 +103,7 @@ module Unidade_de_controle(instrucao, regDst, jump, branch, memRead, memtoReg, a
 				memWrite = 1'b0;
 				branch 	= 1'b0;
 				jump 		= 1'b0;
-				aluOp 	= 2'b00;
+				aluOp 	= 2'b000;
 			end
 		endcase
 	end

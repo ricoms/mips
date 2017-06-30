@@ -3,19 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'DeBounce:db2|DB_out'
-Slack : -148.925
-TNS   : -222707.791
+Slack : -161.932
+TNS   : -245231.215
 
 Type  : Slow 1200mV 85C Model Setup 'clk_fpga'
-Slack : -2.290
-TNS   : -28.329
+Slack : -2.102
+TNS   : -26.958
 
 Type  : Slow 1200mV 85C Model Hold 'clk_fpga'
 Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'DeBounce:db2|DB_out'
-Slack : 0.549
+Slack : 0.623
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_fpga'
@@ -27,19 +27,19 @@ Slack : -1.285
 TNS   : -2022.590
 
 Type  : Slow 1200mV 0C Model Setup 'DeBounce:db2|DB_out'
-Slack : -134.820
-TNS   : -201443.867
+Slack : -146.804
+TNS   : -222139.970
 
 Type  : Slow 1200mV 0C Model Setup 'clk_fpga'
-Slack : -2.075
-TNS   : -23.295
+Slack : -1.865
+TNS   : -22.061
 
 Type  : Slow 1200mV 0C Model Hold 'clk_fpga'
 Slack : 0.354
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'DeBounce:db2|DB_out'
-Slack : 0.506
+Slack : 0.560
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_fpga'
@@ -51,24 +51,24 @@ Slack : -1.285
 TNS   : -2022.590
 
 Type  : Fast 1200mV 0C Model Setup 'DeBounce:db2|DB_out'
-Slack : -74.368
-TNS   : -110843.275
+Slack : -81.265
+TNS   : -122693.905
 
 Type  : Fast 1200mV 0C Model Setup 'clk_fpga'
-Slack : -0.703
-TNS   : -1.498
-
-Type  : Fast 1200mV 0C Model Hold 'DeBounce:db2|DB_out'
-Slack : 0.180
-TNS   : 0.000
+Slack : -0.636
+TNS   : -1.454
 
 Type  : Fast 1200mV 0C Model Hold 'clk_fpga'
 Slack : 0.182
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Hold 'DeBounce:db2|DB_out'
+Slack : 0.287
+TNS   : 0.000
+
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_fpga'
 Slack : -3.000
-TNS   : -32.721
+TNS   : -32.750
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'DeBounce:db2|DB_out'
 Slack : -1.000

@@ -6,9 +6,10 @@ module MIPS (
 	programTens, programHundreds, programThousands, userOnes, userTens,
 	userHundreds, userThousands,
 	output wire clock, jump, branch, memRead, memtoReg, memWrite, aluSrc, regWrite, regDst, reset,
-	output wire [1:0] aluOp
+	output wire [2:0] aluOp
 );
 	wire zero;
+	wire [5:0] ALUC_operacao;
 	wire [31:0] PC_backfrom_add1, PC_goto_add1, instrucao, data1, data2, memDataOut,
 	muxBranch_out, muxJump_out, aluAddResult, mainAluResult, output32, toDisplay,
 	returnToRegisters, muxRegDst_out, ULASrc_out;
@@ -31,7 +32,7 @@ module MIPS (
 			 
 	MUX32bits muxBranch(.data1(PC_backfrom_add1), .data2(aluAddResult),
 						     .sign(branch & zero), .mux_out(muxBranch_out));
-	MUX32bits muxJump(.data1(muxBranch_out), .data2({{PC_backfrom_add1[31:28]}, {2'b00}, {instrucao[25:0]}}), //<< 2}}),
+	MUX32bits muxJump(.data1(muxBranch_out), .data2({{PC_backfrom_add1[31:26]}, {instrucao[25:0]}}), //<< 2}}),
 						   .sign(jump), .mux_out(muxJump_out));
 	
 	Instructions_memory IM(.clock(clock), .address(PC_goto_add1), .instrucao(instrucao));
@@ -53,12 +54,14 @@ module MIPS (
 		
 	MUX32bits ULASrc(.data1(data2), .data2(output32),
 						  .sign(aluSrc), .mux_out(ULASrc_out));
-							  
-	ALU MainALU(.data1(data1), .data2(ULASrc_out), .operation(instrucao[5:0]),
+	
+	ALUControl ALUC(.operation(instrucao[5:0]), .ALUOp(aluOp), .operation_out(ALUC_operacao));
+	
+	ALU MainALU(.data1(data1), .data2(ULASrc_out), .operation(ALUC_operacao),
 		 .zero(zero), .aluResult(mainAluResult));
 	
 	mainMemory MainMem(.clock(clock), .data_in(data2), .address(mainAluResult),
-				  .MemWrite(memWrite), .data_out(memDataOut));
+				  .MemWrite(memWrite), .MemRead(memRead), .data_out(memDataOut));
 	
 	MUX32bits finalMux(.data1(mainAluResult), .data2(memDataOut),
 						     .sign(memtoReg), .mux_out(returnToRegisters));

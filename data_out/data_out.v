@@ -1,8 +1,8 @@
-module mainMemory(clock, data_in, address, MemWrite, data_out);
-	input clock, MemWrite;
+module mainMemory(clock, data_in, address, MemWrite, MemRead, data_out);
+	input clock, MemWrite, MemRead;
 	input [31:0] data_in;
 	input [9:0] address;
-	output [31:0] data_out;
+	output reg [31:0] data_out;
 	reg [9:0] addressRegister;
 	
 	reg [31:0] ram[40:0];
@@ -12,7 +12,8 @@ module mainMemory(clock, data_in, address, MemWrite, data_out);
 		end
 		addressRegister = address;
 	end
-	
-	assign data_out = ram[address];
+	always @ (MemRead) begin
+		data_out = ram[address];
+	end
 
 endmodule

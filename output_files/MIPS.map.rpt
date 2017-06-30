@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS
-Thu Jun 29 19:38:08 2017
+Thu Jun 29 21:42:29 2017
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
 
 
@@ -26,17 +26,16 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
  18. lpm_mult Parameter Settings by Entity Instance
  19. Port Connectivity Checks: "Output:out3"
  20. Port Connectivity Checks: "mainMemory:MainMem"
- 21. Port Connectivity Checks: "ALU:MainALU"
- 22. Port Connectivity Checks: "registers:rgs"
- 23. Port Connectivity Checks: "MUX5bits:muxRegDst"
- 24. Port Connectivity Checks: "Instructions_memory:IM"
- 25. Port Connectivity Checks: "MUX32bits:muxJump"
- 26. Port Connectivity Checks: "DeBounce:db2"
- 27. Port Connectivity Checks: "DeBounce:db1"
- 28. Post-Synthesis Netlist Statistics for Top Partition
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
- 31. Analysis & Synthesis Suppressed Messages
+ 21. Port Connectivity Checks: "registers:rgs"
+ 22. Port Connectivity Checks: "MUX5bits:muxRegDst"
+ 23. Port Connectivity Checks: "Instructions_memory:IM"
+ 24. Port Connectivity Checks: "MUX32bits:muxJump"
+ 25. Port Connectivity Checks: "DeBounce:db2"
+ 26. Port Connectivity Checks: "DeBounce:db1"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -63,16 +62,16 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 29 19:38:08 2017           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 29 21:42:28 2017           ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Standard Edition ;
 ; Revision Name                      ; MIPS                                            ;
 ; Top-level Entity Name              ; MIPS                                            ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 6,685                                           ;
-;     Total combinational functions  ; 5,203                                           ;
+; Total logic elements               ; 6,888                                           ;
+;     Total combinational functions  ; 5,406                                           ;
 ;     Dedicated logic registers      ; 1,602                                           ;
 ; Total registers                    ; 1602                                            ;
-; Total pins                         ; 108                                             ;
+; Total pins                         ; 109                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 6                                               ;
@@ -205,6 +204,7 @@ agreement for further details.
 ; Output/BCD.v                            ; yes             ; User Verilog HDL File        ; /home-local/aluno/Documentos/Ricardo/mips/Output/BCD.v                            ;         ;
 ; Output/Output.v                         ; yes             ; User Verilog HDL File        ; /home-local/aluno/Documentos/Ricardo/mips/Output/Output.v                         ;         ;
 ; Debouncer/Debouncer.v                   ; yes             ; User Verilog HDL File        ; /home-local/aluno/Documentos/Ricardo/mips/Debouncer/Debouncer.v                   ;         ;
+; UC/ALUControl.v                         ; yes             ; User Verilog HDL File        ; /home-local/aluno/Documentos/Ricardo/mips/UC/ALUControl.v                         ;         ;
 ; lpm_divide.tdf                          ; yes             ; Megafunction                 ; /opt/intelFPGA/16.1/quartus/libraries/megafunctions/lpm_divide.tdf                ;         ;
 ; abs_divider.inc                         ; yes             ; Megafunction                 ; /opt/intelFPGA/16.1/quartus/libraries/megafunctions/abs_divider.inc               ;         ;
 ; sign_div_unsign.inc                     ; yes             ; Megafunction                 ; /opt/intelFPGA/16.1/quartus/libraries/megafunctions/sign_div_unsign.inc           ;         ;
@@ -229,30 +229,30 @@ agreement for further details.
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 6,685               ;
+; Estimated Total logic elements              ; 6,888               ;
 ;                                             ;                     ;
-; Total combinational functions               ; 5203                ;
+; Total combinational functions               ; 5406                ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 3509                ;
-;     -- 3 input functions                    ; 1460                ;
-;     -- <=2 input functions                  ; 234                 ;
+;     -- 4 input functions                    ; 3706                ;
+;     -- 3 input functions                    ; 1496                ;
+;     -- <=2 input functions                  ; 204                 ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 3983                ;
+;     -- normal mode                          ; 4186                ;
 ;     -- arithmetic mode                      ; 1220                ;
 ;                                             ;                     ;
 ; Total registers                             ; 1602                ;
 ;     -- Dedicated logic registers            ; 1602                ;
 ;     -- I/O registers                        ; 0                   ;
 ;                                             ;                     ;
-; I/O pins                                    ; 108                 ;
+; I/O pins                                    ; 109                 ;
 ;                                             ;                     ;
 ; Embedded Multiplier 9-bit elements          ; 6                   ;
 ;                                             ;                     ;
 ; Maximum fan-out node                        ; DeBounce:db2|DB_out ;
 ; Maximum fan-out                             ; 1576                ;
-; Total fan-out                               ; 23915               ;
-; Average fan-out                             ; 3.40                ;
+; Total fan-out                               ; 24752               ;
+; Average fan-out                             ; 3.42                ;
 +---------------------------------------------+---------------------+
 
 
@@ -261,28 +261,28 @@ agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Entity Name          ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |MIPS                                     ; 5203 (20)           ; 1602 (0)                  ; 0           ; 6            ; 0       ; 3         ; 108  ; 0            ; |MIPS                                                                                                                                   ; MIPS                 ; work         ;
-;    |ALU:MainALU|                          ; 2632 (405)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |MIPS|ALU:MainALU                                                                                                                       ; ALU                  ; work         ;
-;       |lpm_divide:Div0|                   ; 1105 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Div0                                                                                                       ; lpm_divide           ; work         ;
-;          |lpm_divide_hkm:auto_generated|  ; 1105 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm       ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 1105 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh  ; work         ;
-;                |alt_u_div_6af:divider|    ; 1105 (1105)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af        ; work         ;
-;       |lpm_divide:Mod0|                   ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Mod0                                                                                                       ; lpm_divide           ; work         ;
-;          |lpm_divide_kcm:auto_generated|  ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; lpm_divide_kcm       ; work         ;
-;             |sign_div_unsign_9nh:divider| ; 1094 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh  ; work         ;
-;                |alt_u_div_6af:divider|    ; 1094 (1092)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af        ; work         ;
+; |MIPS                                     ; 5406 (18)           ; 1602 (0)                  ; 0           ; 6            ; 0       ; 3         ; 109  ; 0            ; |MIPS                                                                                                                                   ; MIPS                 ; work         ;
+;    |ALU:MainALU|                          ; 2957 (728)          ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |MIPS|ALU:MainALU                                                                                                                       ; ALU                  ; work         ;
+;       |lpm_divide:Div0|                   ; 1110 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Div0                                                                                                       ; lpm_divide           ; work         ;
+;          |lpm_divide_hkm:auto_generated|  ; 1110 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Div0|lpm_divide_hkm:auto_generated                                                                         ; lpm_divide_hkm       ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1110 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh  ; work         ;
+;                |alt_u_div_6af:divider|    ; 1110 (1110)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Div0|lpm_divide_hkm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af        ; work         ;
+;       |lpm_divide:Mod0|                   ; 1091 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Mod0                                                                                                       ; lpm_divide           ; work         ;
+;          |lpm_divide_kcm:auto_generated|  ; 1091 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Mod0|lpm_divide_kcm:auto_generated                                                                         ; lpm_divide_kcm       ; work         ;
+;             |sign_div_unsign_9nh:divider| ; 1091 (0)            ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider                                             ; sign_div_unsign_9nh  ; work         ;
+;                |alt_u_div_6af:divider|    ; 1091 (1089)         ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider                       ; alt_u_div_6af        ; work         ;
 ;                   |add_sub_7pc:add_sub_0| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_7pc:add_sub_0 ; add_sub_7pc          ; work         ;
 ;                   |add_sub_8pc:add_sub_1| ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_divide:Mod0|lpm_divide_kcm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_6af:divider|add_sub_8pc:add_sub_1 ; add_sub_8pc          ; work         ;
 ;       |lpm_mult:Mult0|                    ; 28 (0)              ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_mult:Mult0                                                                                                        ; lpm_mult             ; work         ;
 ;          |mult_7dt:auto_generated|        ; 28 (28)             ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |MIPS|ALU:MainALU|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ; mult_7dt             ; work         ;
+;    |ALUControl:ALUC|                      ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALUControl:ALUC                                                                                                                   ; ALUControl           ; work         ;
 ;    |ALUadd1:AluAdd1|                      ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALUadd1:AluAdd1                                                                                                                   ; ALUadd1              ; work         ;
 ;    |ALUadd:ALUadd|                        ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|ALUadd:ALUadd                                                                                                                     ; ALUadd               ; work         ;
 ;    |DeBounce:db1|                         ; 13 (13)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|DeBounce:db1                                                                                                                      ; DeBounce             ; work         ;
 ;    |DeBounce:db2|                         ; 13 (13)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|DeBounce:db2                                                                                                                      ; DeBounce             ; work         ;
-;    |Instructions_memory:IM|               ; 71 (71)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Instructions_memory:IM                                                                                                            ; Instructions_memory  ; work         ;
+;    |Instructions_memory:IM|               ; 79 (79)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Instructions_memory:IM                                                                                                            ; Instructions_memory  ; work         ;
 ;    |MUX32bits:ULASrc|                     ; 32 (32)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX32bits:ULASrc                                                                                                                  ; MUX32bits            ; work         ;
-;    |MUX32bits:finalMux|                   ; 399 (399)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX32bits:finalMux                                                                                                                ; MUX32bits            ; work         ;
-;    |MUX32bits:muxJump|                    ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX32bits:muxJump                                                                                                                 ; MUX32bits            ; work         ;
+;    |MUX32bits:finalMux|                   ; 186 (186)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX32bits:finalMux                                                                                                                ; MUX32bits            ; work         ;
 ;    |MUX5bits:muxRegDst|                   ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|MUX5bits:muxRegDst                                                                                                                ; MUX5bits             ; work         ;
 ;    |Output:out1|                          ; 398 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Output:out1                                                                                                                       ; Output               ; work         ;
 ;       |BCD:converter|                     ; 370 (370)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Output:out1|BCD:converter                                                                                                         ; BCD                  ; work         ;
@@ -300,10 +300,10 @@ agreement for further details.
 ;       |BCD:converter|                     ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Output:out3|BCD:converter                                                                                                         ; BCD                  ; work         ;
 ;       |sevenSegmentsDisplay:displayA|     ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Output:out3|sevenSegmentsDisplay:displayA                                                                                         ; sevenSegmentsDisplay ; work         ;
 ;       |sevenSegmentsDisplay:displayB|     ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Output:out3|sevenSegmentsDisplay:displayB                                                                                         ; sevenSegmentsDisplay ; work         ;
-;    |Unidade_de_controle:UC|               ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Unidade_de_controle:UC                                                                                                            ; Unidade_de_controle  ; work         ;
-;    |mainMemory:MainMem|                   ; 843 (843)           ; 1312 (1312)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|mainMemory:MainMem                                                                                                                ; mainMemory           ; work         ;
+;    |Unidade_de_controle:UC|               ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|Unidade_de_controle:UC                                                                                                            ; Unidade_de_controle  ; work         ;
+;    |mainMemory:MainMem|                   ; 820 (820)           ; 1312 (1312)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|mainMemory:MainMem                                                                                                                ; mainMemory           ; work         ;
 ;    |program_counter:pc|                   ; 41 (41)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|program_counter:pc                                                                                                                ; program_counter      ; work         ;
-;    |registers:rgs|                        ; 241 (241)           ; 230 (230)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|registers:rgs                                                                                                                     ; registers            ; work         ;
+;    |registers:rgs|                        ; 343 (343)           ; 230 (230)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |MIPS|registers:rgs                                                                                                                     ; registers            ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -357,7 +357,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; registers:rgs|registerFile[30][29]       ; Stuck at GND due to stuck port data_in      ;
 ; registers:rgs|registerFile[30][30]       ; Stuck at GND due to stuck port data_in      ;
 ; registers:rgs|registerFile[30][31]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[6][23]        ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[6][23]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[6][22]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[6][21]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[6][20]        ; Stuck at GND due to stuck port data_in      ;
@@ -380,7 +380,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[6][3]         ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[6][2]         ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[6][1]         ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[6][0]         ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[6][0]         ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[5][31]        ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[5][30]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[5][29]        ; Stuck at GND due to stuck port data_in      ;
@@ -389,7 +389,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[5][26]        ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[5][25]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[5][24]        ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[5][23]        ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[5][23]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[5][22]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[5][21]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[5][20]        ; Stuck at GND due to stuck port data_in      ;
@@ -476,22 +476,22 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[3][3]         ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[3][2]         ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[3][1]         ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[3][0]         ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[3][0]         ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[2][31]        ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[2][30]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[2][29]        ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[2][28]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[2][27]        ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[2][26]        ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[2][25]        ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[2][24]        ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[2][23]        ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[2][22]        ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[2][25]        ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[2][24]        ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[2][23]        ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[2][22]        ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[2][21]        ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[2][20]        ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[2][19]        ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[2][18]        ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[2][17]        ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[2][20]        ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[2][19]        ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[2][18]        ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[2][17]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[2][16]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[2][15]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[2][14]        ; Stuck at GND due to stuck port data_in      ;
@@ -537,10 +537,10 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[1][6]         ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[1][5]         ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[1][4]         ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[1][3]         ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[1][3]         ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[1][2]         ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[1][1]         ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[1][0]         ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[1][0]         ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|clock0[0..31]     ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[6][24]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[6][25]        ; Stuck at GND due to stuck port data_in      ;
@@ -711,7 +711,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[11][30]       ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[11][31]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[15][0]        ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[15][1]        ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[15][1]        ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[15][2]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[15][3]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[15][4]        ; Stuck at GND due to stuck port data_in      ;
@@ -759,15 +759,15 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[16][14]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[16][15]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[16][16]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[16][17]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[16][18]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[16][19]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[16][20]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[16][17]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[16][18]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[16][19]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[16][20]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[16][21]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[16][22]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[16][23]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[16][24]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[16][25]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[16][22]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[16][23]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[16][24]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[16][25]       ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[16][26]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[16][27]       ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[16][28]       ; Stuck at GND due to stuck port data_in      ;
@@ -790,16 +790,16 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[17][13]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[17][14]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[17][15]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[17][16]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[17][17]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[17][18]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[17][19]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[17][20]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[17][21]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[17][22]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[17][23]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[17][24]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[17][25]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[17][16]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[17][17]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[17][18]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[17][19]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[17][20]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[17][21]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[17][22]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[17][23]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[17][24]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[17][25]       ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[17][26]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[17][27]       ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[17][28]       ; Stuck at GND due to stuck port data_in      ;
@@ -829,7 +829,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[18][20]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[18][21]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[18][22]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[18][23]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[18][23]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[18][24]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[18][25]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[18][26]       ; Stuck at GND due to stuck port data_in      ;
@@ -854,14 +854,14 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[19][13]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[19][14]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[19][15]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[19][16]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[19][16]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[19][17]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[19][18]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[19][19]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[19][20]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[19][21]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[19][21]       ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[19][22]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[19][23]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[19][23]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[19][24]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[19][25]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[19][26]       ; Stuck at VCC due to stuck port data_in      ;
@@ -887,13 +887,13 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[20][14]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[20][15]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[20][16]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[20][17]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[20][17]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[20][18]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[20][19]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[20][20]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[20][21]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[20][22]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[20][23]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[20][22]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[20][23]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[20][24]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[20][25]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[20][26]       ; Stuck at VCC due to stuck port data_in      ;
@@ -1032,7 +1032,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[24][31]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[30][0]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[30][1]        ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[30][2]        ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[30][2]        ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[30][3]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[30][4]        ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[30][5]        ; Stuck at GND due to stuck port data_in      ;
@@ -1079,15 +1079,15 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[31][14]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[31][15]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[31][16]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[31][17]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[31][18]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[31][19]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[31][20]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[31][17]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[31][18]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[31][19]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[31][20]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[31][21]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[31][22]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[31][23]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[31][24]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[31][25]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[31][22]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[31][23]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[31][24]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[31][25]       ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[31][26]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[31][27]       ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[31][28]       ; Stuck at GND due to stuck port data_in      ;
@@ -1110,16 +1110,16 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[32][13]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[32][14]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[32][15]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[32][16]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[32][17]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[32][18]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[32][19]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[32][20]       ; Stuck at VCC due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[32][21]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[32][22]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[32][23]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[32][24]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[32][25]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[32][16]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[32][17]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[32][18]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[32][19]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[32][20]       ; Stuck at GND due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[32][21]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[32][22]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[32][23]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[32][24]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[32][25]       ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[32][26]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[32][27]       ; Stuck at VCC due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[32][28]       ; Stuck at GND due to stuck port data_in      ;
@@ -1149,7 +1149,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; Instructions_memory:IM|RAM[33][20]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[33][21]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[33][22]       ; Stuck at GND due to stuck port data_in      ;
-; Instructions_memory:IM|RAM[33][23]       ; Stuck at VCC due to stuck port data_in      ;
+; Instructions_memory:IM|RAM[33][23]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[33][24]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[33][25]       ; Stuck at GND due to stuck port data_in      ;
 ; Instructions_memory:IM|RAM[33][26]       ; Stuck at VCC due to stuck port data_in      ;
@@ -1999,66 +1999,78 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +------------------------------------+---------------------------+-------------------------------------------------------------------------+
 ; Register name                      ; Reason for Removal        ; Registers Removed due to This Register                                  ;
 +------------------------------------+---------------------------+-------------------------------------------------------------------------+
-; Instructions_memory:IM|RAM[6][23]  ; Stuck at VCC              ; registers:rgs|registerFile[5][4], registers:rgs|registerFile[5][3],     ;
+; Instructions_memory:IM|RAM[6][23]  ; Stuck at GND              ; registers:rgs|registerFile[5][4], registers:rgs|registerFile[5][3],     ;
 ;                                    ; due to stuck port data_in ; registers:rgs|registerFile[5][2], registers:rgs|registerFile[5][1],     ;
-;                                    ;                           ; registers:rgs|registerFile[5][0], registers:rgs|registerFile[5][5],     ;
-;                                    ;                           ; registers:rgs|registerFile[5][24], registers:rgs|registerFile[6][0],    ;
+;                                    ;                           ; registers:rgs|registerFile[5][5], registers:rgs|registerFile[5][24],    ;
+;                                    ;                           ; registers:rgs|registerFile[5][28], registers:rgs|registerFile[5][29],   ;
 ;                                    ;                           ; registers:rgs|registerFile[6][1], registers:rgs|registerFile[6][2],     ;
 ;                                    ;                           ; registers:rgs|registerFile[6][3], registers:rgs|registerFile[6][4],     ;
 ;                                    ;                           ; registers:rgs|registerFile[6][5], registers:rgs|registerFile[6][24],    ;
-;                                    ;                           ; registers:rgs|registerFile[7][0], registers:rgs|registerFile[7][1],     ;
-;                                    ;                           ; registers:rgs|registerFile[7][2], registers:rgs|registerFile[7][3],     ;
-;                                    ;                           ; registers:rgs|registerFile[7][4], registers:rgs|registerFile[7][5],     ;
-;                                    ;                           ; registers:rgs|registerFile[7][24], registers:rgs|registerFile[8][0],    ;
+;                                    ;                           ; registers:rgs|registerFile[6][28], registers:rgs|registerFile[6][29],   ;
+;                                    ;                           ; registers:rgs|registerFile[7][1], registers:rgs|registerFile[7][2],     ;
+;                                    ;                           ; registers:rgs|registerFile[7][3], registers:rgs|registerFile[7][4],     ;
+;                                    ;                           ; registers:rgs|registerFile[7][5], registers:rgs|registerFile[7][24],    ;
+;                                    ;                           ; registers:rgs|registerFile[7][28], registers:rgs|registerFile[7][29],   ;
 ;                                    ;                           ; registers:rgs|registerFile[8][1], registers:rgs|registerFile[8][2],     ;
 ;                                    ;                           ; registers:rgs|registerFile[8][3], registers:rgs|registerFile[8][4],     ;
 ;                                    ;                           ; registers:rgs|registerFile[8][5], registers:rgs|registerFile[8][24],    ;
-;                                    ;                           ; registers:rgs|registerFile[9][0], registers:rgs|registerFile[9][1],     ;
-;                                    ;                           ; registers:rgs|registerFile[9][2], registers:rgs|registerFile[9][3],     ;
-;                                    ;                           ; registers:rgs|registerFile[9][4], registers:rgs|registerFile[9][5],     ;
-;                                    ;                           ; registers:rgs|registerFile[9][24], registers:rgs|registerFile[10][0],   ;
+;                                    ;                           ; registers:rgs|registerFile[8][28], registers:rgs|registerFile[8][29],   ;
+;                                    ;                           ; registers:rgs|registerFile[9][1], registers:rgs|registerFile[9][2],     ;
+;                                    ;                           ; registers:rgs|registerFile[9][3], registers:rgs|registerFile[9][4],     ;
+;                                    ;                           ; registers:rgs|registerFile[9][5], registers:rgs|registerFile[9][24],    ;
+;                                    ;                           ; registers:rgs|registerFile[9][28], registers:rgs|registerFile[9][29],   ;
 ;                                    ;                           ; registers:rgs|registerFile[10][1], registers:rgs|registerFile[10][2],   ;
 ;                                    ;                           ; registers:rgs|registerFile[10][3], registers:rgs|registerFile[10][4],   ;
 ;                                    ;                           ; registers:rgs|registerFile[10][5], registers:rgs|registerFile[10][24],  ;
-;                                    ;                           ; registers:rgs|registerFile[11][0], registers:rgs|registerFile[11][1],   ;
-;                                    ;                           ; registers:rgs|registerFile[11][2], registers:rgs|registerFile[11][3],   ;
-;                                    ;                           ; registers:rgs|registerFile[11][4], registers:rgs|registerFile[11][5],   ;
-;                                    ;                           ; registers:rgs|registerFile[11][24], registers:rgs|registerFile[21][0],  ;
+;                                    ;                           ; registers:rgs|registerFile[10][28], registers:rgs|registerFile[10][29], ;
+;                                    ;                           ; registers:rgs|registerFile[11][1], registers:rgs|registerFile[11][2],   ;
+;                                    ;                           ; registers:rgs|registerFile[11][3], registers:rgs|registerFile[11][4],   ;
+;                                    ;                           ; registers:rgs|registerFile[11][5], registers:rgs|registerFile[11][24],  ;
+;                                    ;                           ; registers:rgs|registerFile[11][28], registers:rgs|registerFile[11][29], ;
 ;                                    ;                           ; registers:rgs|registerFile[21][1], registers:rgs|registerFile[21][2],   ;
 ;                                    ;                           ; registers:rgs|registerFile[21][3], registers:rgs|registerFile[21][4],   ;
 ;                                    ;                           ; registers:rgs|registerFile[21][5], registers:rgs|registerFile[21][24],  ;
-;                                    ;                           ; registers:rgs|registerFile[22][0], registers:rgs|registerFile[22][1],   ;
-;                                    ;                           ; registers:rgs|registerFile[22][2], registers:rgs|registerFile[22][3],   ;
-;                                    ;                           ; registers:rgs|registerFile[22][4], registers:rgs|registerFile[22][5],   ;
-;                                    ;                           ; registers:rgs|registerFile[22][24], registers:rgs|registerFile[23][0],  ;
+;                                    ;                           ; registers:rgs|registerFile[21][28], registers:rgs|registerFile[21][29], ;
+;                                    ;                           ; registers:rgs|registerFile[22][1], registers:rgs|registerFile[22][2],   ;
+;                                    ;                           ; registers:rgs|registerFile[22][3], registers:rgs|registerFile[22][4],   ;
+;                                    ;                           ; registers:rgs|registerFile[22][5], registers:rgs|registerFile[22][24],  ;
+;                                    ;                           ; registers:rgs|registerFile[22][28], registers:rgs|registerFile[22][29], ;
 ;                                    ;                           ; registers:rgs|registerFile[23][1], registers:rgs|registerFile[23][2],   ;
 ;                                    ;                           ; registers:rgs|registerFile[23][3], registers:rgs|registerFile[23][4],   ;
 ;                                    ;                           ; registers:rgs|registerFile[23][5], registers:rgs|registerFile[23][24],  ;
-;                                    ;                           ; registers:rgs|registerFile[24][0], registers:rgs|registerFile[24][1],   ;
-;                                    ;                           ; registers:rgs|registerFile[24][2], registers:rgs|registerFile[24][3],   ;
-;                                    ;                           ; registers:rgs|registerFile[24][4], registers:rgs|registerFile[24][5],   ;
-;                                    ;                           ; registers:rgs|registerFile[24][24], registers:rgs|registerFile[25][0],  ;
+;                                    ;                           ; registers:rgs|registerFile[23][28], registers:rgs|registerFile[23][29], ;
+;                                    ;                           ; registers:rgs|registerFile[24][1], registers:rgs|registerFile[24][2],   ;
+;                                    ;                           ; registers:rgs|registerFile[24][3], registers:rgs|registerFile[24][4],   ;
+;                                    ;                           ; registers:rgs|registerFile[24][5], registers:rgs|registerFile[24][24],  ;
+;                                    ;                           ; registers:rgs|registerFile[24][28], registers:rgs|registerFile[24][29], ;
 ;                                    ;                           ; registers:rgs|registerFile[25][1], registers:rgs|registerFile[25][2],   ;
 ;                                    ;                           ; registers:rgs|registerFile[25][3], registers:rgs|registerFile[25][4],   ;
 ;                                    ;                           ; registers:rgs|registerFile[25][5], registers:rgs|registerFile[25][24],  ;
-;                                    ;                           ; registers:rgs|registerFile[26][0], registers:rgs|registerFile[26][1],   ;
-;                                    ;                           ; registers:rgs|registerFile[26][2], registers:rgs|registerFile[26][3],   ;
-;                                    ;                           ; registers:rgs|registerFile[26][4], registers:rgs|registerFile[26][5],   ;
-;                                    ;                           ; registers:rgs|registerFile[26][24], registers:rgs|registerFile[27][0],  ;
+;                                    ;                           ; registers:rgs|registerFile[25][28], registers:rgs|registerFile[25][29], ;
+;                                    ;                           ; registers:rgs|registerFile[26][1], registers:rgs|registerFile[26][2],   ;
+;                                    ;                           ; registers:rgs|registerFile[26][3], registers:rgs|registerFile[26][4],   ;
+;                                    ;                           ; registers:rgs|registerFile[26][5], registers:rgs|registerFile[26][24],  ;
+;                                    ;                           ; registers:rgs|registerFile[26][28], registers:rgs|registerFile[26][29], ;
 ;                                    ;                           ; registers:rgs|registerFile[27][1], registers:rgs|registerFile[27][2],   ;
 ;                                    ;                           ; registers:rgs|registerFile[27][3], registers:rgs|registerFile[27][4],   ;
 ;                                    ;                           ; registers:rgs|registerFile[27][5], registers:rgs|registerFile[27][24],  ;
+;                                    ;                           ; registers:rgs|registerFile[27][28], registers:rgs|registerFile[27][29], ;
+;                                    ;                           ; registers:rgs|registerFile[4][29], registers:rgs|registerFile[4][28],   ;
 ;                                    ;                           ; registers:rgs|registerFile[4][24], registers:rgs|registerFile[4][5],    ;
 ;                                    ;                           ; registers:rgs|registerFile[4][4], registers:rgs|registerFile[4][3],     ;
 ;                                    ;                           ; registers:rgs|registerFile[4][2], registers:rgs|registerFile[4][1],     ;
-;                                    ;                           ; registers:rgs|registerFile[4][0], registers:rgs|registerFile[20][0],    ;
 ;                                    ;                           ; registers:rgs|registerFile[20][1], registers:rgs|registerFile[20][2],   ;
 ;                                    ;                           ; registers:rgs|registerFile[20][3], registers:rgs|registerFile[20][4],   ;
 ;                                    ;                           ; registers:rgs|registerFile[20][5], registers:rgs|registerFile[20][24],  ;
-;                                    ;                           ; registers:rgs|registerFile[16][0], registers:rgs|registerFile[17][0],   ;
-;                                    ;                           ; registers:rgs|registerFile[18][0], registers:rgs|registerFile[19][0],   ;
-;                                    ;                           ; registers:rgs|registerFile[12][0], registers:rgs|registerFile[13][0],   ;
-;                                    ;                           ; registers:rgs|registerFile[14][0], registers:rgs|registerFile[15][0],   ;
+;                                    ;                           ; registers:rgs|registerFile[20][28], registers:rgs|registerFile[20][29], ;
+;                                    ;                           ; registers:rgs|registerFile[12][29], registers:rgs|registerFile[13][29], ;
+;                                    ;                           ; registers:rgs|registerFile[14][29], registers:rgs|registerFile[15][29], ;
+;                                    ;                           ; registers:rgs|registerFile[16][29], registers:rgs|registerFile[17][29], ;
+;                                    ;                           ; registers:rgs|registerFile[18][29], registers:rgs|registerFile[19][29], ;
+;                                    ;                           ; registers:rgs|registerFile[12][28], registers:rgs|registerFile[13][28], ;
+;                                    ;                           ; registers:rgs|registerFile[14][28], registers:rgs|registerFile[15][28], ;
+;                                    ;                           ; registers:rgs|registerFile[16][28], registers:rgs|registerFile[17][28], ;
+;                                    ;                           ; registers:rgs|registerFile[18][28], registers:rgs|registerFile[19][28], ;
 ;                                    ;                           ; registers:rgs|registerFile[12][24], registers:rgs|registerFile[13][24], ;
 ;                                    ;                           ; registers:rgs|registerFile[14][24], registers:rgs|registerFile[15][24], ;
 ;                                    ;                           ; registers:rgs|registerFile[16][24], registers:rgs|registerFile[17][24], ;
@@ -2083,91 +2095,40 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ;                                    ;                           ; registers:rgs|registerFile[18][1], registers:rgs|registerFile[19][1],   ;
 ;                                    ;                           ; registers:rgs|registerFile[12][1], registers:rgs|registerFile[13][1],   ;
 ;                                    ;                           ; registers:rgs|registerFile[14][1], registers:rgs|registerFile[15][1]    ;
-; registers:rgs|registerFile[30][6]  ; Stuck at GND              ; registers:rgs|registerFile[5][6], registers:rgs|registerFile[5][27],    ;
-;                                    ; due to stuck port data_in ; registers:rgs|registerFile[5][28], registers:rgs|registerFile[5][29],   ;
-;                                    ;                           ; registers:rgs|registerFile[5][30], registers:rgs|registerFile[5][31],   ;
-;                                    ;                           ; registers:rgs|registerFile[6][6], registers:rgs|registerFile[6][27],    ;
-;                                    ;                           ; registers:rgs|registerFile[6][28], registers:rgs|registerFile[6][29],   ;
-;                                    ;                           ; registers:rgs|registerFile[6][30], registers:rgs|registerFile[6][31],   ;
-;                                    ;                           ; registers:rgs|registerFile[7][6], registers:rgs|registerFile[7][27],    ;
-;                                    ;                           ; registers:rgs|registerFile[7][28], registers:rgs|registerFile[7][29],   ;
-;                                    ;                           ; registers:rgs|registerFile[7][30], registers:rgs|registerFile[7][31],   ;
-;                                    ;                           ; registers:rgs|registerFile[8][6], registers:rgs|registerFile[8][27],    ;
-;                                    ;                           ; registers:rgs|registerFile[8][28], registers:rgs|registerFile[8][29],   ;
-;                                    ;                           ; registers:rgs|registerFile[8][30], registers:rgs|registerFile[8][31],   ;
-;                                    ;                           ; registers:rgs|registerFile[9][6], registers:rgs|registerFile[9][27],    ;
-;                                    ;                           ; registers:rgs|registerFile[9][28], registers:rgs|registerFile[9][29],   ;
-;                                    ;                           ; registers:rgs|registerFile[9][30], registers:rgs|registerFile[9][31],   ;
-;                                    ;                           ; registers:rgs|registerFile[10][6], registers:rgs|registerFile[10][27],  ;
-;                                    ;                           ; registers:rgs|registerFile[10][28], registers:rgs|registerFile[10][29], ;
-;                                    ;                           ; registers:rgs|registerFile[10][30], registers:rgs|registerFile[10][31], ;
-;                                    ;                           ; registers:rgs|registerFile[11][6], registers:rgs|registerFile[11][27],  ;
-;                                    ;                           ; registers:rgs|registerFile[11][28], registers:rgs|registerFile[11][29], ;
-;                                    ;                           ; registers:rgs|registerFile[11][30], registers:rgs|registerFile[11][31], ;
-;                                    ;                           ; registers:rgs|registerFile[21][6], registers:rgs|registerFile[21][27],  ;
-;                                    ;                           ; registers:rgs|registerFile[21][28], registers:rgs|registerFile[21][29], ;
-;                                    ;                           ; registers:rgs|registerFile[21][30], registers:rgs|registerFile[21][31], ;
-;                                    ;                           ; registers:rgs|registerFile[22][6], registers:rgs|registerFile[22][27],  ;
-;                                    ;                           ; registers:rgs|registerFile[22][28], registers:rgs|registerFile[22][29], ;
-;                                    ;                           ; registers:rgs|registerFile[22][30], registers:rgs|registerFile[22][31], ;
-;                                    ;                           ; registers:rgs|registerFile[23][6], registers:rgs|registerFile[23][27],  ;
-;                                    ;                           ; registers:rgs|registerFile[23][28], registers:rgs|registerFile[23][29], ;
-;                                    ;                           ; registers:rgs|registerFile[23][30], registers:rgs|registerFile[23][31], ;
-;                                    ;                           ; registers:rgs|registerFile[24][6], registers:rgs|registerFile[24][27],  ;
-;                                    ;                           ; registers:rgs|registerFile[24][28], registers:rgs|registerFile[24][29], ;
-;                                    ;                           ; registers:rgs|registerFile[24][30], registers:rgs|registerFile[24][31], ;
-;                                    ;                           ; registers:rgs|registerFile[25][6], registers:rgs|registerFile[25][27],  ;
-;                                    ;                           ; registers:rgs|registerFile[25][28], registers:rgs|registerFile[25][29], ;
-;                                    ;                           ; registers:rgs|registerFile[25][30], registers:rgs|registerFile[25][31], ;
-;                                    ;                           ; registers:rgs|registerFile[26][6], registers:rgs|registerFile[26][27],  ;
-;                                    ;                           ; registers:rgs|registerFile[26][28], registers:rgs|registerFile[26][29], ;
-;                                    ;                           ; registers:rgs|registerFile[26][30], registers:rgs|registerFile[26][31], ;
-;                                    ;                           ; registers:rgs|registerFile[27][6], registers:rgs|registerFile[27][27],  ;
-;                                    ;                           ; registers:rgs|registerFile[27][28], registers:rgs|registerFile[27][29], ;
-;                                    ;                           ; registers:rgs|registerFile[27][30], registers:rgs|registerFile[27][31], ;
-;                                    ;                           ; registers:rgs|registerFile[4][31], registers:rgs|registerFile[4][30],   ;
-;                                    ;                           ; registers:rgs|registerFile[4][29], registers:rgs|registerFile[4][28],   ;
-;                                    ;                           ; registers:rgs|registerFile[4][27], registers:rgs|registerFile[4][6],    ;
-;                                    ;                           ; registers:rgs|registerFile[20][6], registers:rgs|registerFile[20][27],  ;
-;                                    ;                           ; registers:rgs|registerFile[20][28], registers:rgs|registerFile[20][29], ;
-;                                    ;                           ; registers:rgs|registerFile[20][30], registers:rgs|registerFile[20][31], ;
-;                                    ;                           ; registers:rgs|registerFile[12][31], registers:rgs|registerFile[13][31], ;
-;                                    ;                           ; registers:rgs|registerFile[14][31], registers:rgs|registerFile[15][31], ;
-;                                    ;                           ; registers:rgs|registerFile[16][31], registers:rgs|registerFile[17][31], ;
-;                                    ;                           ; registers:rgs|registerFile[18][31], registers:rgs|registerFile[19][31], ;
+; Instructions_memory:IM|RAM[5][31]  ; Stuck at VCC              ; registers:rgs|registerFile[5][25], registers:rgs|registerFile[5][26],   ;
+;                                    ; due to stuck port data_in ; registers:rgs|registerFile[5][27], registers:rgs|registerFile[5][30],   ;
+;                                    ;                           ; registers:rgs|registerFile[6][25], registers:rgs|registerFile[6][26],   ;
+;                                    ;                           ; registers:rgs|registerFile[6][27], registers:rgs|registerFile[6][30],   ;
+;                                    ;                           ; registers:rgs|registerFile[7][25], registers:rgs|registerFile[7][26],   ;
+;                                    ;                           ; registers:rgs|registerFile[7][27], registers:rgs|registerFile[7][30],   ;
+;                                    ;                           ; registers:rgs|registerFile[8][25], registers:rgs|registerFile[8][26],   ;
+;                                    ;                           ; registers:rgs|registerFile[8][27], registers:rgs|registerFile[8][30],   ;
+;                                    ;                           ; registers:rgs|registerFile[9][25], registers:rgs|registerFile[9][26],   ;
+;                                    ;                           ; registers:rgs|registerFile[9][27], registers:rgs|registerFile[9][30],   ;
+;                                    ;                           ; registers:rgs|registerFile[10][25], registers:rgs|registerFile[10][26], ;
+;                                    ;                           ; registers:rgs|registerFile[10][27], registers:rgs|registerFile[10][30], ;
+;                                    ;                           ; registers:rgs|registerFile[11][25], registers:rgs|registerFile[11][26], ;
+;                                    ;                           ; registers:rgs|registerFile[11][27], registers:rgs|registerFile[11][30], ;
+;                                    ;                           ; registers:rgs|registerFile[21][25], registers:rgs|registerFile[21][26], ;
+;                                    ;                           ; registers:rgs|registerFile[21][27], registers:rgs|registerFile[21][30], ;
+;                                    ;                           ; registers:rgs|registerFile[22][25], registers:rgs|registerFile[22][26], ;
+;                                    ;                           ; registers:rgs|registerFile[22][27], registers:rgs|registerFile[22][30], ;
+;                                    ;                           ; registers:rgs|registerFile[23][25], registers:rgs|registerFile[23][26], ;
+;                                    ;                           ; registers:rgs|registerFile[23][27], registers:rgs|registerFile[23][30], ;
+;                                    ;                           ; registers:rgs|registerFile[24][25], registers:rgs|registerFile[24][26], ;
+;                                    ;                           ; registers:rgs|registerFile[24][27], registers:rgs|registerFile[24][30], ;
+;                                    ;                           ; registers:rgs|registerFile[4][30], registers:rgs|registerFile[4][27],   ;
+;                                    ;                           ; registers:rgs|registerFile[4][26], registers:rgs|registerFile[4][25],   ;
+;                                    ;                           ; registers:rgs|registerFile[20][25], registers:rgs|registerFile[20][26], ;
+;                                    ;                           ; registers:rgs|registerFile[20][27], registers:rgs|registerFile[20][30], ;
 ;                                    ;                           ; registers:rgs|registerFile[12][30], registers:rgs|registerFile[13][30], ;
 ;                                    ;                           ; registers:rgs|registerFile[14][30], registers:rgs|registerFile[15][30], ;
 ;                                    ;                           ; registers:rgs|registerFile[16][30], registers:rgs|registerFile[17][30], ;
 ;                                    ;                           ; registers:rgs|registerFile[18][30], registers:rgs|registerFile[19][30], ;
-;                                    ;                           ; registers:rgs|registerFile[12][29], registers:rgs|registerFile[13][29], ;
-;                                    ;                           ; registers:rgs|registerFile[14][29], registers:rgs|registerFile[15][29], ;
-;                                    ;                           ; registers:rgs|registerFile[16][29], registers:rgs|registerFile[17][29], ;
-;                                    ;                           ; registers:rgs|registerFile[18][29], registers:rgs|registerFile[19][29], ;
-;                                    ;                           ; registers:rgs|registerFile[12][28], registers:rgs|registerFile[13][28], ;
-;                                    ;                           ; registers:rgs|registerFile[14][28], registers:rgs|registerFile[15][28], ;
-;                                    ;                           ; registers:rgs|registerFile[16][28], registers:rgs|registerFile[17][28], ;
-;                                    ;                           ; registers:rgs|registerFile[18][28], registers:rgs|registerFile[19][28], ;
 ;                                    ;                           ; registers:rgs|registerFile[12][27], registers:rgs|registerFile[13][27], ;
 ;                                    ;                           ; registers:rgs|registerFile[14][27], registers:rgs|registerFile[15][27], ;
 ;                                    ;                           ; registers:rgs|registerFile[16][27], registers:rgs|registerFile[17][27], ;
 ;                                    ;                           ; registers:rgs|registerFile[18][27], registers:rgs|registerFile[19][27], ;
-;                                    ;                           ; registers:rgs|registerFile[12][6], registers:rgs|registerFile[13][6],   ;
-;                                    ;                           ; registers:rgs|registerFile[14][6], registers:rgs|registerFile[15][6],   ;
-;                                    ;                           ; registers:rgs|registerFile[16][6], registers:rgs|registerFile[17][6],   ;
-;                                    ;                           ; registers:rgs|registerFile[18][6], registers:rgs|registerFile[19][6]    ;
-; Instructions_memory:IM|RAM[5][31]  ; Stuck at VCC              ; registers:rgs|registerFile[5][25], registers:rgs|registerFile[5][26],   ;
-;                                    ; due to stuck port data_in ; registers:rgs|registerFile[6][25], registers:rgs|registerFile[6][26],   ;
-;                                    ;                           ; registers:rgs|registerFile[7][25], registers:rgs|registerFile[7][26],   ;
-;                                    ;                           ; registers:rgs|registerFile[8][25], registers:rgs|registerFile[8][26],   ;
-;                                    ;                           ; registers:rgs|registerFile[9][25], registers:rgs|registerFile[9][26],   ;
-;                                    ;                           ; registers:rgs|registerFile[10][25], registers:rgs|registerFile[10][26], ;
-;                                    ;                           ; registers:rgs|registerFile[11][25], registers:rgs|registerFile[11][26], ;
-;                                    ;                           ; registers:rgs|registerFile[21][25], registers:rgs|registerFile[21][26], ;
-;                                    ;                           ; registers:rgs|registerFile[22][25], registers:rgs|registerFile[22][26], ;
-;                                    ;                           ; registers:rgs|registerFile[23][25], registers:rgs|registerFile[23][26], ;
-;                                    ;                           ; registers:rgs|registerFile[24][25], registers:rgs|registerFile[24][26], ;
-;                                    ;                           ; registers:rgs|registerFile[4][26], registers:rgs|registerFile[4][25],   ;
-;                                    ;                           ; registers:rgs|registerFile[20][25], registers:rgs|registerFile[20][26], ;
 ;                                    ;                           ; registers:rgs|registerFile[12][26], registers:rgs|registerFile[13][26], ;
 ;                                    ;                           ; registers:rgs|registerFile[14][26], registers:rgs|registerFile[15][26], ;
 ;                                    ;                           ; registers:rgs|registerFile[16][26], registers:rgs|registerFile[17][26], ;
@@ -2176,6 +2137,42 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ;                                    ;                           ; registers:rgs|registerFile[14][25], registers:rgs|registerFile[15][25], ;
 ;                                    ;                           ; registers:rgs|registerFile[16][25], registers:rgs|registerFile[17][25], ;
 ;                                    ;                           ; registers:rgs|registerFile[18][25], registers:rgs|registerFile[19][25]  ;
+; registers:rgs|registerFile[30][6]  ; Stuck at GND              ; registers:rgs|registerFile[5][0], registers:rgs|registerFile[5][6],     ;
+;                                    ; due to stuck port data_in ; registers:rgs|registerFile[5][31], registers:rgs|registerFile[6][0],    ;
+;                                    ;                           ; registers:rgs|registerFile[6][6], registers:rgs|registerFile[6][31],    ;
+;                                    ;                           ; registers:rgs|registerFile[7][0], registers:rgs|registerFile[7][6],     ;
+;                                    ;                           ; registers:rgs|registerFile[7][31], registers:rgs|registerFile[8][0],    ;
+;                                    ;                           ; registers:rgs|registerFile[8][6], registers:rgs|registerFile[8][31],    ;
+;                                    ;                           ; registers:rgs|registerFile[9][0], registers:rgs|registerFile[9][6],     ;
+;                                    ;                           ; registers:rgs|registerFile[9][31], registers:rgs|registerFile[10][0],   ;
+;                                    ;                           ; registers:rgs|registerFile[10][6], registers:rgs|registerFile[10][31],  ;
+;                                    ;                           ; registers:rgs|registerFile[11][0], registers:rgs|registerFile[11][6],   ;
+;                                    ;                           ; registers:rgs|registerFile[11][31], registers:rgs|registerFile[21][0],  ;
+;                                    ;                           ; registers:rgs|registerFile[21][6], registers:rgs|registerFile[21][31],  ;
+;                                    ;                           ; registers:rgs|registerFile[22][0], registers:rgs|registerFile[22][6],   ;
+;                                    ;                           ; registers:rgs|registerFile[22][31], registers:rgs|registerFile[23][0],  ;
+;                                    ;                           ; registers:rgs|registerFile[23][6], registers:rgs|registerFile[23][31],  ;
+;                                    ;                           ; registers:rgs|registerFile[24][0], registers:rgs|registerFile[24][6],   ;
+;                                    ;                           ; registers:rgs|registerFile[24][31], registers:rgs|registerFile[25][0],  ;
+;                                    ;                           ; registers:rgs|registerFile[25][6], registers:rgs|registerFile[25][31],  ;
+;                                    ;                           ; registers:rgs|registerFile[26][0], registers:rgs|registerFile[26][6],   ;
+;                                    ;                           ; registers:rgs|registerFile[26][31], registers:rgs|registerFile[27][0],  ;
+;                                    ;                           ; registers:rgs|registerFile[27][6], registers:rgs|registerFile[27][31],  ;
+;                                    ;                           ; registers:rgs|registerFile[4][31], registers:rgs|registerFile[4][6],    ;
+;                                    ;                           ; registers:rgs|registerFile[4][0], registers:rgs|registerFile[20][0],    ;
+;                                    ;                           ; registers:rgs|registerFile[20][6], registers:rgs|registerFile[20][31],  ;
+;                                    ;                           ; registers:rgs|registerFile[16][0], registers:rgs|registerFile[17][0],   ;
+;                                    ;                           ; registers:rgs|registerFile[18][0], registers:rgs|registerFile[19][0],   ;
+;                                    ;                           ; registers:rgs|registerFile[12][0], registers:rgs|registerFile[13][0],   ;
+;                                    ;                           ; registers:rgs|registerFile[14][0], registers:rgs|registerFile[15][0],   ;
+;                                    ;                           ; registers:rgs|registerFile[12][31], registers:rgs|registerFile[13][31], ;
+;                                    ;                           ; registers:rgs|registerFile[14][31], registers:rgs|registerFile[15][31], ;
+;                                    ;                           ; registers:rgs|registerFile[16][31], registers:rgs|registerFile[17][31], ;
+;                                    ;                           ; registers:rgs|registerFile[18][31], registers:rgs|registerFile[19][31], ;
+;                                    ;                           ; registers:rgs|registerFile[12][6], registers:rgs|registerFile[13][6],   ;
+;                                    ;                           ; registers:rgs|registerFile[14][6], registers:rgs|registerFile[15][6],   ;
+;                                    ;                           ; registers:rgs|registerFile[16][6], registers:rgs|registerFile[17][6],   ;
+;                                    ;                           ; registers:rgs|registerFile[18][6], registers:rgs|registerFile[19][6]    ;
 ; registers:rgs|registerFile[30][7]  ; Stuck at GND              ; registers:rgs|registerFile[5][7], registers:rgs|registerFile[6][7],     ;
 ;                                    ; due to stuck port data_in ; registers:rgs|registerFile[7][7], registers:rgs|registerFile[8][7],     ;
 ;                                    ;                           ; registers:rgs|registerFile[9][7], registers:rgs|registerFile[10][7],    ;
@@ -2381,8 +2378,11 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ;                                    ;                           ; registers:rgs|registerFile[16][8], registers:rgs|registerFile[17][8],   ;
 ;                                    ;                           ; registers:rgs|registerFile[18][8], registers:rgs|registerFile[19][8]    ;
 ; Instructions_memory:IM|RAM[6][20]  ; Stuck at GND              ; registers:rgs|registerFile[25][25], registers:rgs|registerFile[25][26], ;
-;                                    ; due to stuck port data_in ; registers:rgs|registerFile[26][25], registers:rgs|registerFile[26][26], ;
-;                                    ;                           ; registers:rgs|registerFile[27][25], registers:rgs|registerFile[27][26]  ;
+;                                    ; due to stuck port data_in ; registers:rgs|registerFile[25][27], registers:rgs|registerFile[25][30], ;
+;                                    ;                           ; registers:rgs|registerFile[26][25], registers:rgs|registerFile[26][26], ;
+;                                    ;                           ; registers:rgs|registerFile[26][27], registers:rgs|registerFile[26][30], ;
+;                                    ;                           ; registers:rgs|registerFile[27][25], registers:rgs|registerFile[27][26], ;
+;                                    ;                           ; registers:rgs|registerFile[27][27], registers:rgs|registerFile[27][30]  ;
 +------------------------------------+---------------------------+-------------------------------------------------------------------------+
 
 
@@ -2406,22 +2406,22 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[28] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[26] ;
-; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[19] ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[2]  ;
-; 32:1               ; 26 bits   ; 546 LEs       ; 312 LEs              ; 234 LEs                ; No         ; |MIPS|registers:rgs|Mux17                   ;
-; 32:1               ; 6 bits    ; 126 LEs       ; 72 LEs               ; 54 LEs                 ; No         ; |MIPS|registers:rgs|Mux27                   ;
-; 32:1               ; 26 bits   ; 546 LEs       ; 312 LEs              ; 234 LEs                ; No         ; |MIPS|registers:rgs|Mux35                   ;
-; 32:1               ; 6 bits    ; 126 LEs       ; 72 LEs               ; 54 LEs                 ; No         ; |MIPS|registers:rgs|Mux63                   ;
-; 70:1               ; 8 bits    ; 368 LEs       ; 80 LEs               ; 288 LEs                ; No         ; |MIPS|MUX32bits:finalMux|mux_out[8]         ;
-; 70:1               ; 2 bits    ; 92 LEs        ; 20 LEs               ; 72 LEs                 ; No         ; |MIPS|ALU:MainALU|Selector27                ;
-; 70:1               ; 8 bits    ; 368 LEs       ; 80 LEs               ; 288 LEs                ; No         ; |MIPS|MUX32bits:finalMux|mux_out[19]        ;
-; 71:1               ; 2 bits    ; 94 LEs        ; 20 LEs               ; 74 LEs                 ; No         ; |MIPS|MUX32bits:finalMux|mux_out[6]         ;
-; 71:1               ; 2 bits    ; 94 LEs        ; 20 LEs               ; 74 LEs                 ; No         ; |MIPS|ALU:MainALU|Selector29                ;
-; 71:1               ; 4 bits    ; 188 LEs       ; 40 LEs               ; 148 LEs                ; No         ; |MIPS|MUX32bits:finalMux|mux_out[26]        ;
-; 72:1               ; 2 bits    ; 96 LEs        ; 22 LEs               ; 74 LEs                 ; No         ; |MIPS|MUX32bits:finalMux|mux_out[29]        ;
-; 73:1               ; 2 bits    ; 96 LEs        ; 22 LEs               ; 74 LEs                 ; No         ; |MIPS|MUX32bits:finalMux|mux_out[31]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[30] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[27] ;
+; 4:1                ; 21 bits   ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[22] ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |MIPS|program_counter:pc|programCounter[4]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |MIPS|ALUControl:ALUC|Mux1                  ;
+; 32:1               ; 26 bits   ; 546 LEs       ; 312 LEs              ; 234 LEs                ; No         ; |MIPS|registers:rgs|Mux20                   ;
+; 32:1               ; 6 bits    ; 126 LEs       ; 72 LEs               ; 54 LEs                 ; No         ; |MIPS|registers:rgs|Mux28                   ;
+; 32:1               ; 26 bits   ; 546 LEs       ; 312 LEs              ; 234 LEs                ; No         ; |MIPS|registers:rgs|Mux38                   ;
+; 32:1               ; 6 bits    ; 126 LEs       ; 72 LEs               ; 54 LEs                 ; No         ; |MIPS|registers:rgs|Mux61                   ;
+; 69:1               ; 8 bits    ; 368 LEs       ; 80 LEs               ; 288 LEs                ; No         ; |MIPS|ALU:MainALU|Selector23                ;
+; 69:1               ; 8 bits    ; 368 LEs       ; 80 LEs               ; 288 LEs                ; No         ; |MIPS|ALU:MainALU|Selector8                 ;
+; 70:1               ; 4 bits    ; 184 LEs       ; 40 LEs               ; 144 LEs                ; No         ; |MIPS|ALU:MainALU|Selector25                ;
+; 70:1               ; 4 bits    ; 184 LEs       ; 40 LEs               ; 144 LEs                ; No         ; |MIPS|ALU:MainALU|Selector6                 ;
+; 71:1               ; 2 bits    ; 94 LEs        ; 24 LEs               ; 70 LEs                 ; No         ; |MIPS|ALU:MainALU|Selector28                ;
+; 71:1               ; 2 bits    ; 94 LEs        ; 22 LEs               ; 72 LEs                 ; No         ; |MIPS|ALU:MainALU|Selector2                 ;
+; 72:1               ; 2 bits    ; 96 LEs        ; 22 LEs               ; 74 LEs                 ; No         ; |MIPS|ALU:MainALU|Selector1                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
@@ -2564,15 +2564,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU:MainALU"                                                                                                                                 ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; ALUOp ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "registers:rgs"                                                                                                                                                                             ;
 +---------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2634,27 +2625,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 108                         ;
+; boundary_port         ; 109                         ;
 ; cycloneiii_ff         ; 1602                        ;
 ;     ENA               ; 1536                        ;
 ;     SCLR SLD          ; 38                          ;
 ;     SLD               ; 5                           ;
 ;     plain             ; 23                          ;
-; cycloneiii_lcell_comb ; 5223                        ;
+; cycloneiii_lcell_comb ; 5427                        ;
 ;     arith             ; 1220                        ;
 ;         2 data inputs ; 71                          ;
 ;         3 data inputs ; 1149                        ;
-;     normal            ; 4003                        ;
+;     normal            ; 4207                        ;
 ;         0 data inputs ; 62                          ;
-;         1 data inputs ; 22                          ;
-;         2 data inputs ; 99                          ;
-;         3 data inputs ; 311                         ;
-;         4 data inputs ; 3509                        ;
+;         1 data inputs ; 23                          ;
+;         2 data inputs ; 69                          ;
+;         3 data inputs ; 347                         ;
+;         4 data inputs ; 3706                        ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 137.50                      ;
-; Average LUT depth     ; 83.86                       ;
+; Max LUT depth         ; 138.50                      ;
+; Average LUT depth     ; 85.39                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2663,7 +2654,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:19     ;
+; Top            ; 00:00:23     ;
 +----------------+--------------+
 
 
@@ -2673,7 +2664,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Standard Edition
-    Info: Processing started: Thu Jun 29 19:37:35 2017
+    Info: Processing started: Thu Jun 29 21:41:41 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS -c MIPS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20032): Parallel compilation is enabled and will use up to 3 processors
@@ -2695,6 +2686,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file data_ou
     Info (12023): Found entity 1: mainMemory File: /home-local/aluno/Documentos/Ricardo/mips/data_out/data_out.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file divisor_frequencia/divisor_frequencia.v
     Info (12023): Found entity 1: divisor_frequencia File: /home-local/aluno/Documentos/Ricardo/mips/divisor_frequencia/divisor_frequencia.v Line: 1
+Warning (10229): Verilog HDL Expression warning at UC.v(73): truncated literal to match 2 bits File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 73
+Warning (10229): Verilog HDL Expression warning at UC.v(84): truncated literal to match 2 bits File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 84
 Info (12021): Found 1 design units, including 1 entities, in source file UC/UC.v
     Info (12023): Found entity 1: Unidade_de_controle File: /home-local/aluno/Documentos/Ricardo/mips/UC/UC.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Instruction_memory/Instruction_memory.v
@@ -2711,26 +2704,33 @@ Info (12021): Found 1 design units, including 1 entities, in source file Output/
     Info (12023): Found entity 1: Output File: /home-local/aluno/Documentos/Ricardo/mips/Output/Output.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Debouncer/Debouncer.v
     Info (12023): Found entity 1: DeBounce File: /home-local/aluno/Documentos/Ricardo/mips/Debouncer/Debouncer.v Line: 8
+Warning (10229): Verilog HDL Expression warning at ALUControl.v(18): truncated literal to match 2 bits File: /home-local/aluno/Documentos/Ricardo/mips/UC/ALUControl.v Line: 18
+Warning (10229): Verilog HDL Expression warning at ALUControl.v(21): truncated literal to match 2 bits File: /home-local/aluno/Documentos/Ricardo/mips/UC/ALUControl.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file UC/ALUControl.v
+    Info (12023): Found entity 1: ALUControl File: /home-local/aluno/Documentos/Ricardo/mips/UC/ALUControl.v Line: 1
 Info (12127): Elaborating entity "MIPS" for the top level hierarchy
-Info (12128): Elaborating entity "DeBounce" for hierarchy "DeBounce:db1" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 16
+Info (12128): Elaborating entity "DeBounce" for hierarchy "DeBounce:db1" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 17
 Warning (10230): Verilog HDL assignment warning at Debouncer.v(36): truncated value with size 32 to match size of target (11) File: /home-local/aluno/Documentos/Ricardo/mips/Debouncer/Debouncer.v Line: 36
-Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pc" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 25
-Info (12128): Elaborating entity "ALUadd1" for hierarchy "ALUadd1:AluAdd1" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 27
-Info (12128): Elaborating entity "ALUadd" for hierarchy "ALUadd:ALUadd" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 30
-Info (12128): Elaborating entity "MUX32bits" for hierarchy "MUX32bits:muxBranch" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 33
-Info (12128): Elaborating entity "Instructions_memory" for hierarchy "Instructions_memory:IM" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 37
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pc" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 26
+Info (12128): Elaborating entity "ALUadd1" for hierarchy "ALUadd1:AluAdd1" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 28
+Info (12128): Elaborating entity "ALUadd" for hierarchy "ALUadd:ALUadd" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 31
+Info (12128): Elaborating entity "MUX32bits" for hierarchy "MUX32bits:muxBranch" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 34
+Info (12128): Elaborating entity "Instructions_memory" for hierarchy "Instructions_memory:IM" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 38
 Warning (10030): Net "RAM[80..36]" at Instruction_memory.v(7) has no driver or initial value, using a default initial value '0' File: /home-local/aluno/Documentos/Ricardo/mips/Instruction_memory/Instruction_memory.v Line: 7
 Warning (10030): Net "RAM[29..25]" at Instruction_memory.v(7) has no driver or initial value, using a default initial value '0' File: /home-local/aluno/Documentos/Ricardo/mips/Instruction_memory/Instruction_memory.v Line: 7
 Warning (10030): Net "RAM[14..12]" at Instruction_memory.v(7) has no driver or initial value, using a default initial value '0' File: /home-local/aluno/Documentos/Ricardo/mips/Instruction_memory/Instruction_memory.v Line: 7
 Warning (10030): Net "RAM[0]" at Instruction_memory.v(7) has no driver or initial value, using a default initial value '0' File: /home-local/aluno/Documentos/Ricardo/mips/Instruction_memory/Instruction_memory.v Line: 7
-Info (12128): Elaborating entity "Unidade_de_controle" for hierarchy "Unidade_de_controle:UC" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 42
-Info (12128): Elaborating entity "MUX5bits" for hierarchy "MUX5bits:muxRegDst" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 45
-Info (12128): Elaborating entity "registers" for hierarchy "registers:rgs" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 50
-Info (12128): Elaborating entity "bitExtender" for hierarchy "bitExtender:be" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 52
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:MainALU" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 58
-Info (12128): Elaborating entity "mainMemory" for hierarchy "mainMemory:MainMem" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 61
+Info (12128): Elaborating entity "Unidade_de_controle" for hierarchy "Unidade_de_controle:UC" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 43
+Info (12128): Elaborating entity "MUX5bits" for hierarchy "MUX5bits:muxRegDst" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 46
+Info (12128): Elaborating entity "registers" for hierarchy "registers:rgs" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 51
+Info (12128): Elaborating entity "bitExtender" for hierarchy "bitExtender:be" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 53
+Info (12128): Elaborating entity "ALUControl" for hierarchy "ALUControl:ALUC" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 58
+Warning (10272): Verilog HDL Case Statement warning at ALUControl.v(21): case item expression covers a value already covered by a previous case item File: /home-local/aluno/Documentos/Ricardo/mips/UC/ALUControl.v Line: 21
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:MainALU" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 61
+Info (12128): Elaborating entity "mainMemory" for hierarchy "mainMemory:MainMem" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 64
 Warning (10036): Verilog HDL or VHDL warning at data_out.v(6): object "addressRegister" assigned a value but never read File: /home-local/aluno/Documentos/Ricardo/mips/data_out/data_out.v Line: 6
-Info (12128): Elaborating entity "Output" for hierarchy "Output:out1" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 67
+Warning (10235): Verilog HDL Always Construct warning at data_out.v(16): variable "address" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home-local/aluno/Documentos/Ricardo/mips/data_out/data_out.v Line: 16
+Info (12128): Elaborating entity "Output" for hierarchy "Output:out1" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 70
 Info (12128): Elaborating entity "BCD" for hierarchy "Output:out1|BCD:converter" File: /home-local/aluno/Documentos/Ricardo/mips/Output/Output.v Line: 7
 Warning (10230): Verilog HDL assignment warning at BCD.v(23): truncated value with size 32 to match size of target (4) File: /home-local/aluno/Documentos/Ricardo/mips/Output/BCD.v Line: 23
 Warning (10230): Verilog HDL assignment warning at BCD.v(21): truncated value with size 32 to match size of target (4) File: /home-local/aluno/Documentos/Ricardo/mips/Output/BCD.v Line: 21
@@ -2738,293 +2738,293 @@ Warning (10230): Verilog HDL assignment warning at BCD.v(19): truncated value wi
 Warning (10230): Verilog HDL assignment warning at BCD.v(17): truncated value with size 32 to match size of target (4) File: /home-local/aluno/Documentos/Ricardo/mips/Output/BCD.v Line: 17
 Info (12128): Elaborating entity "sevenSegmentsDisplay" for hierarchy "Output:out1|sevenSegmentsDisplay:displayA" File: /home-local/aluno/Documentos/Ricardo/mips/Output/Output.v Line: 10
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
+    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
+    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
+    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
+    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
+    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
+    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
+    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
+    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
+    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
-    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 14
+    Warning (12110): Net "muxRegDst_out[31]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[30]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[29]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[28]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[27]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[26]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[25]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[24]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[23]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[22]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[21]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[20]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[19]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[18]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[17]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[16]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[15]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[14]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[13]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[12]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[11]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[10]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[9]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[8]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[7]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[6]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
+    Warning (12110): Net "muxRegDst_out[5]" is missing source, defaulting to GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 15
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "mainMemory:MainMem|ram" is uninferred due to asynchronous read logic File: /home-local/aluno/Documentos/Ricardo/mips/data_out/data_out.v Line: 8
 Info (278001): Inferred 3 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:MainALU|Div0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 54
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ALU:MainALU|Mult0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 53
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:MainALU|Mod0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 55
-Info (12130): Elaborated megafunction instantiation "ALU:MainALU|lpm_divide:Div0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 54
-Info (12133): Instantiated megafunction "ALU:MainALU|lpm_divide:Div0" with the following parameter: File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 54
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:MainALU|Div0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 24
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ALU:MainALU|Mult0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 23
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU:MainALU|Mod0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 25
+Info (12130): Elaborated megafunction instantiation "ALU:MainALU|lpm_divide:Div0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 24
+Info (12133): Instantiated megafunction "ALU:MainALU|lpm_divide:Div0" with the following parameter: File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 24
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -3039,8 +3039,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_7pc File: /home-local/aluno/Documentos/Ricardo/mips/db/add_sub_7pc.tdf Line: 23
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
     Info (12023): Found entity 1: add_sub_8pc File: /home-local/aluno/Documentos/Ricardo/mips/db/add_sub_8pc.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "ALU:MainALU|lpm_mult:Mult0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 53
-Info (12133): Instantiated megafunction "ALU:MainALU|lpm_mult:Mult0" with the following parameter: File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 53
+Info (12130): Elaborated megafunction instantiation "ALU:MainALU|lpm_mult:Mult0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 23
+Info (12133): Instantiated megafunction "ALU:MainALU|lpm_mult:Mult0" with the following parameter: File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 23
     Info (12134): Parameter "LPM_WIDTHA" = "32"
     Info (12134): Parameter "LPM_WIDTHB" = "32"
     Info (12134): Parameter "LPM_WIDTHP" = "64"
@@ -3052,8 +3052,8 @@ Info (12133): Instantiated megafunction "ALU:MainALU|lpm_mult:Mult0" with the fo
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
     Info (12023): Found entity 1: mult_7dt File: /home-local/aluno/Documentos/Ricardo/mips/db/mult_7dt.tdf Line: 31
-Info (12130): Elaborated megafunction instantiation "ALU:MainALU|lpm_divide:Mod0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 55
-Info (12133): Instantiated megafunction "ALU:MainALU|lpm_divide:Mod0" with the following parameter: File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 55
+Info (12130): Elaborated megafunction instantiation "ALU:MainALU|lpm_divide:Mod0" File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 25
+Info (12133): Instantiated megafunction "ALU:MainALU|lpm_divide:Mod0" with the following parameter: File: /home-local/aluno/Documentos/Ricardo/mips/ALU/ALU.v Line: 25
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -3064,7 +3064,7 @@ Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following DSP element node(s):
         Warning (14320): Synthesized away node "ALU:MainALU|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7" File: /home-local/aluno/Documentos/Ricardo/mips/db/mult_7dt.tdf Line: 67
         Warning (14320): Synthesized away node "ALU:MainALU|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8" File: /home-local/aluno/Documentos/Ricardo/mips/db/mult_7dt.tdf Line: 91
-Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 84 buffer(s)
     Info (13019): Ignored 84 SOFT buffer(s)
 Warning (13024): Output pins are stuck at VCC or GND
@@ -3082,22 +3082,23 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "userThousands[4]" is stuck at GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 7
     Warning (13410): Pin "userThousands[5]" is stuck at GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 7
     Warning (13410): Pin "userThousands[6]" is stuck at VCC File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 7
+    Warning (13410): Pin "aluOp[2]" is stuck at GND File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 10
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file /home-local/aluno/Documentos/Ricardo/mips/output_files/MIPS.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "interrupt" File: /home-local/aluno/Documentos/Ricardo/mips/MIPS.v Line: 2
-Info (21057): Implemented 6863 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7067 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 6749 logic cells
+    Info (21059): Implemented 97 output pins
+    Info (21061): Implemented 6952 logic cells
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 313 warnings
-    Info: Peak virtual memory: 1035 megabytes
-    Info: Processing ended: Thu Jun 29 19:38:08 2017
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:00:47
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 320 warnings
+    Info: Peak virtual memory: 1030 megabytes
+    Info: Processing ended: Thu Jun 29 21:42:29 2017
+    Info: Elapsed time: 00:00:48
+    Info: Total CPU time (on all processors): 00:00:52
 
 
 +------------------------------------------+
