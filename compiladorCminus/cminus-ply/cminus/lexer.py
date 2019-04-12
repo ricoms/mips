@@ -107,6 +107,7 @@ def run_lexer():
     lex.input(strings)
     while 1:
         token = lex.token()
+        print(token)
         if not token: break
         print("(%s,'%s',%d)" % (token.type, token.value, token.lineno))
 

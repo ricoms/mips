@@ -20,6 +20,9 @@ precedence = (
     ('right', 'NOT', 'SIGN'),
 )
 
+class MyParser:
+    def build(self):
+        self.parser = yacc.yacc(object=self)
 
 def p_program(p):
     'program : declaration_seq'
@@ -329,8 +332,8 @@ def run_parser():
       print("Usage: parser.py <file>")
       sys.exit(1)
 
-    parser = yacc.yacc()
-    parser.parse(strings, tracking=True)
+    yacc.yacc()
+    a = yacc.parse(strings, tracking=True)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,4 @@
+drwxr-xr-x 2 ricardo.savii domain users  4096 Apr 10 21:42 .
+drwxr-xr-x 5 ricardo.savii domain users  4096 Apr  8 16:15 ..
+-rw-r--r-- 1 ricardo.savii domain users     0 Apr 10 21:46 teste.txt
+-rwxr-xr-x 1 ricardo.savii domain users 18184 Apr 10 21:41 shell
